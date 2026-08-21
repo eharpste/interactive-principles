@@ -1,5 +1,5 @@
 {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "env": {
         "browser": true,
         "commonjs": true,
@@ -8,6 +8,7 @@
     },
     "extends": [ "eslint:recommended", "plugin:react/recommended" ],
     "parserOptions": {
+        "requireConfigFile": false,
         "ecmaVersion": 6,
         "ecmaFeatures": {
             "jsx": true
