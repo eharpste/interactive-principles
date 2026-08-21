@@ -4,6 +4,7 @@ import logo from '../images/ixp_logo.svg';
 import menuicon from '../images/menuicon.svg';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import About from './About';
+import Admin from './Admin';
 import Sidebar from 'react-sidebar';
 
 export default class App extends Component {
@@ -71,6 +72,7 @@ export default class App extends Component {
 
                     <Route exact path={'/'} component={Principles}/>
                     <Route exact path={'/about'} component={About}/>
+                    <Route exact path={'/admin'} component={Admin}/>
                 </Router>
             </div>
         );
