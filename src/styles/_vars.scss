@@ -22,20 +22,6 @@ $border-default: $well-bg;
 $lessthan: #ab4f23;
 $greaterthan: #438b5e;
 
-$cat1: #DF6D4D;
-$cat2: #5EA67D;
-$cat3: #379A99;
-
-$cat1--text: darken($cat1, 10%);
-$cat1--mid: lighten($cat1, 20%);
-$cat1--light: lighten($cat1--mid, 12%);
-$cat2--text: darken($cat2, 10%);
-$cat2--mid: lighten($cat2, 30%);
-$cat2--light: lighten($cat2--mid, 11%);
-$cat3--text: darken($cat3, 10%);
-$cat3--mid: lighten($cat3, 35%);
-$cat3--light: lighten($cat3--mid, 14%);
-
 //shadows
 $card-shadow: 3px 4px 0px -1px rgba(70, 74, 80, 0.15);
 $default-shadow: 1px 1px 0px 2px rgba(70, 74, 80, 0.15);

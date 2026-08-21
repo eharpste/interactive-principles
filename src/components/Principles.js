@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import Card from './Card.js';
 import principles from '../principles.json';
+import categories from '../categories.json';
 import Button from './Button.js';
 import CardModal from './CardModal';
 import CategoryFilterButton from './CategoryFilterButton';
 
 function compareStrings(a, b) {
     return (a < b) ? -1 : (a > b) ? 1 : 0;
+}
+
+function findCategory(categoryId) {
+    return categories.find(cat => cat.id === categoryId) || {};
 }
 
 export default class Principles extends Component {
@@ -18,10 +23,7 @@ export default class Principles extends Component {
             allFlipped: false,
             showModal: false,
             cardInModal: principles[0],
-            showCat1: true,
-            showCat2: true,
-            showCat3: true,
-
+            hiddenCategoryIds: []
         };
 
         this.toggleCategory = this.toggleCategory.bind(this);
@@ -73,33 +75,24 @@ export default class Principles extends Component {
     }
 
     //category actions
-    toggleCategory(cat) {
-
-        //
-        if (cat === 1) {
-            this.setState({showCat1: !this.state.showCat1});
-        } else if (cat === 2) {
-            this.setState({showCat2: !this.state.showCat2});
-        } else if (cat === 3) {
-            this.setState({showCat3: !this.state.showCat3});
+    toggleCategory(catId) {
+        let hidden = this.state.hiddenCategoryIds;
+        if (hidden.includes(catId)) {
+            hidden = hidden.filter(id => id !== catId);
+        } else {
+            hidden = [...hidden, catId];
         }
+        this.setState({hiddenCategoryIds: hidden});
     }
 
-    isCategoryHidden(cat) {
+    isCategoryHidden(catId) {
 
-        //if all three are hidden, show all (as opposed to nothing)
-        if (!this.state.showCat1 && !this.state.showCat2 && !this.state.showCat3) {
+        //if every category is hidden, show all (as opposed to nothing)
+        if (this.state.hiddenCategoryIds.length >= categories.length) {
             return false;
         }
 
-        //hide based on state
-        if (cat === 1) {
-            return !this.state.showCat1;
-        } else if (cat === 2) {
-            return !this.state.showCat2;
-        } else {
-            return !this.state.showCat3;
-        }
+        return this.state.hiddenCategoryIds.includes(catId);
     }
 
     //toolbar actions
@@ -136,9 +129,7 @@ export default class Principles extends Component {
             card.flipped = false;
         }
         this.setState({cards: items});
-        this.setState({showCat1: true});
-        this.setState({showCat2: true});
-        this.setState({showCat3: true});
+        this.setState({hiddenCategoryIds: []});
     }
 
     flipToBack(flipcard) {
@@ -173,9 +164,7 @@ export default class Principles extends Component {
     }
 
     draw5Cards() {
-        this.setState({showCat1: true});
-        this.setState({showCat2: true});
-        this.setState({showCat3: true});
+        this.setState({hiddenCategoryIds: []});
 
         let cards = this.shuffle(principles);
         let hand = cards.slice(0, 5);
@@ -220,6 +209,8 @@ export default class Principles extends Component {
     }
 
     render() {
+        const modalCategory = findCategory(this.state.cardInModal.categoryId);
+
         return (
             <div className='cards'>
                 <div className={'main-tools'}>
@@ -227,9 +218,15 @@ export default class Principles extends Component {
                         <div className={'col-12'}>
                             <h3 className={'main-label'}>Filter by Category:</h3>
                             <div className={'category-filters'}>
-                                <CategoryFilterButton cat={1} active={this.state.showCat1} onPress={() => this.toggleCategory(1)}/>
-                                <CategoryFilterButton cat={2} active={this.state.showCat2} onPress={() => this.toggleCategory(2)}/>
-                                <CategoryFilterButton cat={3} active={this.state.showCat3} onPress={() => this.toggleCategory(3)}/>
+                                {categories.map(cat => (
+                                    <CategoryFilterButton
+                                        key={cat.id}
+                                        name={cat.name}
+                                        color={cat.color}
+                                        active={!this.isCategoryHidden(cat.id)}
+                                        onPress={() => this.toggleCategory(cat.id)}
+                                    />
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -259,7 +256,8 @@ export default class Principles extends Component {
                                 id={card.id}
                                 image={card.id}
                                 categoryId={card.categoryId}
-                                categoryName={card.categoryName}
+                                categoryName={findCategory(card.categoryId).name}
+                                categoryColor={findCategory(card.categoryId).color}
                                 principle={card.principle}
                                 description={card.description}
                                 subtitle={card.subtitle}
@@ -281,7 +279,8 @@ export default class Principles extends Component {
                     onOpenRelated={this.modalOpenRelated}
                     id={this.state.cardInModal.id}
                     categoryId={this.state.cardInModal.categoryId}
-                    categoryName={this.state.cardInModal.categoryName}
+                    categoryName={modalCategory.name}
+                    categoryColor={modalCategory.color}
                     principle={this.state.cardInModal.principle}
                     questions={this.state.cardInModal.questions}
                     description={this.state.cardInModal.description}

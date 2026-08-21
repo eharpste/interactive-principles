@@ -49,9 +49,7 @@ $comparison-text-size: .75em;
   text-align: center;
   box-shadow: $default-shadow;
 
-  @include themed() {
-    color: t('dark');
-  }
+  color: var(--cat-dark);
 }
 
 .card-container {
@@ -264,9 +262,7 @@ $comparison-text-size: .75em;
         width: 100%;
         font-size: .9em;
 
-        @include themed() {
-          color: t('mid');
-        }
+        color: var(--cat-mid);
       }
     }
   }

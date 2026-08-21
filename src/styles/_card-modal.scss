@@ -8,9 +8,7 @@
   font-size: .9em;
   text-transform: uppercase;
 
-  @include themed() {
-    color: t('dark');
-  }
+  color: var(--cat-dark);
 }
 
 .card-modal {
@@ -112,9 +110,7 @@
         .comparison__icon {
 
           &:after {
-            @include themed() {
-              border-left-color: t('light');
-            }
+            border-left-color: var(--cat-light);
           }
 
           &:before {

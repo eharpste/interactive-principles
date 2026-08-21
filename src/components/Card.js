@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Img from './Img';
 import Comparison from './Comparison';
+import { getCategoryColors } from '../utils/categoryColors';
 
 class Card extends React.Component {
     constructor(props) {
@@ -87,8 +88,16 @@ class Card extends React.Component {
     }
 
     render() {
+        const colors = getCategoryColors(this.props.categoryColor);
+        const style = {
+            '--cat-dark': colors.dark,
+            '--cat-mid': colors.mid,
+            '--cat-light': colors.light,
+            '--cat-text': colors.text
+        };
+
         return (
-            <div className={'card category--' + this.props.categoryId.toString()}>
+            <div className={'card'} style={style}>
                 { this.renderCard() }
             </div>
         );
@@ -100,6 +109,7 @@ Card.propTypes = {
     id: PropTypes.any,
     categoryId: PropTypes.any,
     categoryName: PropTypes.any,
+    categoryColor: PropTypes.any,
     principle: PropTypes.any,
     questions: PropTypes.any,
     description: PropTypes.any,

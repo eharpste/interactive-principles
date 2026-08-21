@@ -6,6 +6,7 @@ import Comparison from './Comparison';
 import MultipleComparisons from './MultipleComparisons';
 import GameExImg from './GameExImage';
 import RelatedLink from './RelatedLink';
+import { getCategoryColors } from '../utils/categoryColors';
 
 class CardModal extends React.Component {
     constructor(props) {
@@ -120,12 +121,21 @@ class CardModal extends React.Component {
     }
 
     render() {
+        const colors = getCategoryColors(this.props.categoryColor);
+        const style = {
+            '--cat-dark': colors.dark,
+            '--cat-mid': colors.mid,
+            '--cat-light': colors.light,
+            '--cat-text': colors.text
+        };
+
         return(
             <Modal
                 show={this.props.show}
                 onHide={this.props.onClose}
                 centered
-                dialogClassName={'card-modal category--' + this.props.categoryId.toString()}
+                style={style}
+                dialogClassName={'card-modal'}
             >
                 <Modal.Header className={'card-modal__header'} closeButton>
                     <div className={'card-modal__header__id principle-number'}>{this.props.id}</div>
@@ -169,6 +179,7 @@ CardModal.propTypes = {
     id: PropTypes.any,
     categoryId: PropTypes.any,
     categoryName: PropTypes.any,
+    categoryColor: PropTypes.any,
     principle: PropTypes.any,
     subtitle: PropTypes.any,
     questions: PropTypes.any,
