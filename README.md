@@ -1,140 +1,72 @@
 # Interactive Principles
-A deck of learning science principles for designing transformational games
 
+A deck of learning science principles for designing transformational games.
+
+Live site: https://eharpste.github.io/interactive-principles/
+
+---
+
+## How this is organized
+
+- **`src/principles.json`** — the content of every card (principle name, description, questions, examples, etc). Each entry has a `categoryId` linking it to a category.
+- **`src/categories.json`** — the list of categories (id, name, color). Card and filter-button colors are derived automatically from each category's color, so adding, renaming, or recoloring a category doesn't require touching any component or stylesheet.
+- **`src/components/`** — the React app. `Principles.js` is the main card-deck view; `Admin.js` (and `src/components/admin/`) is the content editor described below.
+- **`config/`** and **`webpack.config.js`** — the webpack 5 build setup (dev vs. prod configs get merged with `config/webpack.common.config.js`).
+- **`.github/workflows/deploy.yml`** — builds the site and publishes it to the `gh-pages` branch automatically on every push to `master`. This is what GitHub Pages actually serves.
+
+## Editing content
+
+There are two ways to edit the cards and categories:
+
+### 1. From the deployed site (no local setup needed)
+
+Go to **https://eharpste.github.io/interactive-principles/#/admin**. You'll be asked for a GitHub personal access token:
+
+1. Go to [github.com/settings/personal-access-tokens/new](https://github.com/settings/personal-access-tokens/new).
+2. Scope it to just the `eharpste/interactive-principles` repository.
+3. Under repository permissions, set **Contents: Read and write**.
+4. Generate the token and paste it into the admin page.
+
+The token is only stored in your browser's local storage and is only ever sent to `api.github.com`. From there you can add/edit/delete principle cards and categories; **Save Changes** commits directly to `master`, which triggers an automatic rebuild and redeploy (usually live within a minute or two).
+
+### 2. Editing the JSON directly
+
+`src/principles.json` and `src/categories.json` are plain JSON — you can also edit them directly on github.com (or locally) and push to `master`; the same GitHub Actions workflow will rebuild and redeploy.
+
+## Local development
+
+Requires Node.js (LTS). Then:
+
+```bash
+npm install
+npm start
+```
+
+This runs the dev server at `http://localhost:9000`.
+
+To produce a production build locally (rarely needed now that CI deploys automatically):
+
+```bash
+npm run build:prod
+```
+
+Output goes to `public/`.
+
+## Deployment
+
+Deployment is fully automatic: any push to `master` (including a save from the admin page) triggers `.github/workflows/deploy.yml`, which builds the site and publishes `public/` to the `gh-pages` branch — the branch GitHub Pages actually serves. There's normally no need to run `npm run deploy` locally anymore.
 
 ---
 
 ## Developed With
 
-* [Node.js 8.11](https://nodejs.org/en/) - Javascript runtime
-* [React 16.4](https://reactjs.org/) - A javascript library for building user interfaces
-* [Babel 6.26](https://babeljs.io/) - A transpiler for javascript
-* [Webpack 4.x](https://webpack.js.org/) - A module bundler
-* [SCSS](http://sass-lang.com/) - A css metalanguage
-
----
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-### Prerequisites
-
-The following software is required to be installed on your system:
-
-* Node 8.x
-* Npm 3.x
-
-Type the following commands in the terminal to verify your node and npm versions
-
-  ```bash
-  node -v
-  npm -v
-  ```
-
-### Install
-
-Follow the following steps to get development environment running.
-
-* Clone _'react-starter'_ repository from GitHub
-
-  ```bash
-  git clone https://github.com/drminnaar/react-starter.git
-  ```
-
-   _OR USING SSH_
-
-  ```bash
-  git clone git@github.com:drminnaar/react-starter.git
-  ```
-
-* Install node modules
-
-   ```bash
-   cd react-starter
-   npm install
-   ```
-
-### Build
-
-#### Build Application
-
-dev | prod
-:---: | :---:
-npm run build:dev | npm run build:prod
-
-#### Build Application And Watch For Changes
-
-dev | prod
-:---: | :---:
-npm run build:dev:watch | npm run build:prod:watch
-
-#### Build Application With BundleAnalayzer Plugin Included
-
-dev | prod
-:---: | :---:
-npm run build:dev:bundleanalyze | npm run build:prod:bundleanalyze
-
-After running the above command, a browser window will open displaying an interactive graph resembling the following image:
-
-![bundle-analyzer](https://user-images.githubusercontent.com/33935506/36382812-eadf199e-1592-11e8-9681-cf5ccf67951f.png)
-
-### Run ESlint
-
-#### Lint Project Using ESLint
-
-  ```bash
-  npm run lint
-  ```
-
-#### Lint Project Using ESLint, and autofix
-
-  ```bash
-  npm run lint:fix
-  ```
-
-### Run
-
-#### Run Start
-
-This will run the _'serve:dev'_ npm task
-
-```bash
-npm start
-```
-
-#### Run Dev Server
-
-```bash
-npm run serve:dev
-```
-
-#### Run Dev Server With Dashboard
-
-```bash
-npm run serve:dev:dashboard
-```
-
-The above command will display a dashboard view in your console resembling the following image:
-
-![webpack-dashboard](https://user-images.githubusercontent.com/33935506/36382813-eb10b0a8-1592-11e8-9506-fd25db65a258.png)
-
-#### Run Prod Server
-
-This command will build application using production settings and start the application using _live-server_
-
-```bash
-npm run serve:prod
-```
-
----
-
-## Thanks
-
-* **Douglas Minnaar** - *React Starter Project* - [drminnaar](https://github.com/drminnaar)
+* [React](https://reactjs.org/) - UI library
+* [Webpack 5](https://webpack.js.org/) - Module bundler
+* [Babel 7](https://babeljs.io/) - JavaScript transpiler
+* [Dart Sass](https://sass-lang.com/dart-sass/) - CSS metalanguage
 
 ---
 
 ## Authors
 
-* **Katie McTigue** - *Design + Dev* - [kaitlinmctigue.github.io](https://kaitlinmctigue.github.io/#/)
+* **Katie McTigue** - *Original Design + Dev* - [kaitlinmctigue.github.io](https://kaitlinmctigue.github.io/#/)
