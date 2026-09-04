@@ -219,14 +219,23 @@ export default class Admin extends Component {
         return (
             <form className={'admin-login'} onSubmit={this.handleTokenSubmit}>
                 <p>
-                    Paste a GitHub personal access token with <strong>Contents: Read and write</strong> permission
-                    on <code>eharpste/interactive-principles</code> to edit cards and categories from here.
+                    Paste a GitHub personal access token to edit cards and categories from here.
                     The token is only stored in this browser and only sent to api.github.com.
                 </p>
+                <ol className={'admin-login__steps'}>
+                    <li>
+                        Go to <a href={'https://github.com/settings/personal-access-tokens/new'} target={'_blank'} rel={'noreferrer'}>
+                            github.com/settings/personal-access-tokens/new <i className={'fas fa-external-link-square-alt'}/>
+                        </a>
+                    </li>
+                    <li>Under <strong>Repository access</strong>, choose &quot;Only select repositories&quot; and pick <code>eharpste/interactive-principles</code>.</li>
+                    <li>Click <strong>Repository permissions</strong> to expand it (it's collapsed by default).</li>
+                    <li>Find <strong>Contents</strong> in the list and change it from &quot;No access&quot; to <strong>&quot;Read and write&quot;</strong>.</li>
+                    <li>Scroll down and click <strong>Generate token</strong>, then paste it below.</li>
+                </ol>
                 <p>
-                    <a href={'https://github.com/settings/personal-access-tokens/new'} target={'_blank'} rel={'noreferrer'}>
-                        Create a fine-grained token <i className={'fas fa-external-link-square-alt'}/>
-                    </a> scoped to just this repository, with Contents set to Read and write.
+                    (If that page is confusing, a <a href={'https://github.com/settings/tokens/new'} target={'_blank'} rel={'noreferrer'}>classic token</a> with
+                    the <code>repo</code> scope checked also works, though it grants broader access than this one repo.)
                 </p>
                 <label className={'admin-field'}>
                     <span>GitHub token</span>

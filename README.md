@@ -23,11 +23,14 @@ There are two ways to edit the cards and categories:
 Go to **https://eharpste.github.io/interactive-principles/#/admin**. You'll be asked for a GitHub personal access token:
 
 1. Go to [github.com/settings/personal-access-tokens/new](https://github.com/settings/personal-access-tokens/new).
-2. Scope it to just the `eharpste/interactive-principles` repository.
-3. Under repository permissions, set **Contents: Read and write**.
-4. Generate the token and paste it into the admin page.
+2. Under **Repository access**, choose "Only select repositories" and pick `eharpste/interactive-principles`.
+3. Click **Repository permissions** to expand it (it's collapsed by default).
+4. Find **Contents** in the list and change it from "No access" to **"Read and write"**.
+5. Scroll down, click **Generate token**, and paste it into the admin page.
 
-The token is only stored in your browser's local storage and is only ever sent to `api.github.com`. From there you can add/edit/delete principle cards and categories; **Save Changes** commits directly to `master`, which triggers an automatic rebuild and redeploy (usually live within a minute or two).
+(If that page is confusing, a [classic token](https://github.com/settings/tokens/new) with the `repo` scope checked also works, though it grants broader access than just this repo.)
+
+The token is only stored in your browser's local storage and is only ever sent to `api.github.com`. From there you can add/edit/delete principle cards and categories; **Save Changes** commits directly to `master`, which triggers an automatic rebuild and redeploy (usually live within a minute or two). Note that `master` needs to already have `src/categories.json` and `src/principles.json` for this to work — until this feature branch is merged, the admin page will 404 trying to load them.
 
 ### 2. Editing the JSON directly
 

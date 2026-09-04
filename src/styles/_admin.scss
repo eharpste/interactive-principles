@@ -35,6 +35,15 @@
   p {
     margin-bottom: 1em;
   }
+
+  &__steps {
+    margin: 0 0 1em 1.2em;
+    padding: 0;
+
+    li {
+      margin-bottom: .5em;
+    }
+  }
 }
 
 .admin-field {
