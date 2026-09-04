@@ -1,17 +1,28 @@
-const commonPaths = require('./common-paths');
 const webpack = require('webpack');
+const commonPaths = require('./common-paths');
 
 const config = {
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: commonPaths.outputPath,
+        static: {
+            directory: commonPaths.outputPath
+        },
         compress: true,
-        hot: false,
-        port: 9000
+        hot: true,
+        port: 9000,
+        client: {
+            overlay: {
+                errors: true,
+                warnings: false,
+                runtimeErrors: true
+            }
+        }
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('development')
+        })
     ]
 };
 

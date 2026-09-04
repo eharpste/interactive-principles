@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Memory/Fluency",
+    "color": "#DF6D4D"
+  },
+  {
+    "id": 2,
+    "name": "Induction/Refinement",
+    "color": "#5EA67D"
+  },
+  {
+    "id": 3,
+    "name": "Sense-making/Understanding",
+    "color": "#379A99"
+  }
+]

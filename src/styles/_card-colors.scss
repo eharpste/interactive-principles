@@ -1,77 +1,28 @@
-@import "vars";
-
-//themes
-$themes: (
-        1: (
-                text: $cat1--text,
-                dark: $cat1,
-                mid: $cat1--mid,
-                light: $cat1--light
-        ),
-        2: (
-                text: $cat2--text,
-                dark: $cat2,
-                mid: $cat2--mid,
-                light: $cat2--light
-        ),
-        3: (
-                text: $cat3--text,
-                dark: $cat3,
-                mid: $cat3--mid,
-                light: $cat3--light
-        )
-);
-
-@mixin themed() {
-  @each $theme, $map in $themes {
-    .category--#{$theme} & {
-      $theme-map: () !global;
-      @each $key, $submap in $map {
-        $value: map-get(map-get($themes, $theme), '#{$key}');
-        $theme-map: map-merge($theme-map, ($key: $value)) !global;
-      }
-      @content;
-      $theme-map: null !global;
-    }
-  }
-}
-
-@function t($key) {
-  @return map-get($theme-map, $key);
-}
+// Category colors are supplied per-element as CSS custom properties
+// (--cat-dark, --cat-mid, --cat-light, --cat-text), computed at render time
+// from each category's single admin-picked base color. This lets the number
+// of categories grow without touching this stylesheet.
 
 @mixin bg-dark() {
-  @include themed() {
-    background-color: t('dark');
-  }
+  background-color: var(--cat-dark);
 }
 
 @mixin bg-mid() {
-  @include themed() {
-    background-color: t('mid');
-  }
+  background-color: var(--cat-mid);
 }
 
 @mixin bg-light() {
-  @include themed() {
-    background-color: t('light');
-  }
+  background-color: var(--cat-light);
 }
 
 @mixin text-dark() {
-  @include themed() {
-    color: t('text');
-  }
+  color: var(--cat-text);
 }
 
 @mixin text-mid() {
-  @include themed() {
-    color: t('mid');
-  }
+  color: var(--cat-mid);
 }
 
 @mixin text-light() {
-  @include themed() {
-    color: t('light');
-  }
+  color: var(--cat-light);
 }

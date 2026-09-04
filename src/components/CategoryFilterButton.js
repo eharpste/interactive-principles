@@ -1,27 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { getCategoryColors } from '../utils/categoryColors';
 
 function CategoryFilterButton(props) {
-    let title;
-
-    if (props.cat === 1) {
-        title = 'Memory/Fluency';
-    } else if (props.cat === 2) {
-        title = 'Induction/Refinement';
-    } else {
-        title = 'Sense-making/Understanding';
-    }
+    const colors = getCategoryColors(props.color);
+    const style = {
+        '--cat-dark': colors.dark,
+        '--cat-mid': colors.mid,
+        '--cat-light': colors.light,
+        '--cat-text': colors.text
+    };
 
     return(
-        <h2 onClick={props.onPress} className={'category-filters__button category-filters__button--cat' + props.cat + ' ' + (props.active ? 'category-filters__button--active' : '')}>
+        <h2
+            onClick={props.onPress}
+            style={style}
+            className={'category-filters__button ' + (props.active ? 'category-filters__button--active' : '')}
+        >
             <i className={props.active ? 'fas fa-check-square' : 'far fa-square'}/>
-            {title}
+            {props.name}
         </h2>
     );
 }
 
 CategoryFilterButton.propTypes= {
-    cat: PropTypes.any,
+    name: PropTypes.string,
+    color: PropTypes.string,
     onPress: PropTypes.any,
     active: PropTypes.any
 };

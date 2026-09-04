@@ -14,7 +14,7 @@ import './styles/app.scss';
 
 
 ReactDOM.render(
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
         <App>
             loading
         </App>
