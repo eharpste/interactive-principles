@@ -19,6 +19,7 @@
 /.vscode/**/*
 .idea
 *.idea
+.claude/
 
 npm-debug.log*
 yarn-debug.log*
