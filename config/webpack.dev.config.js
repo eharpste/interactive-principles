@@ -10,7 +10,14 @@ const config = {
         },
         compress: true,
         hot: true,
-        port: 9000
+        port: 9000,
+        client: {
+            overlay: {
+                errors: true,
+                warnings: false,
+                runtimeErrors: true
+            }
+        }
     },
     plugins: [
         new webpack.DefinePlugin({
