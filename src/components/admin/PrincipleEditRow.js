@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CitationsEditor from './CitationsEditor';
 
 const FIELD_DEFS = [
     { key: 'principle', label: 'Principle name', type: 'text' },
     { key: 'subtitle', label: 'Subtitle (comparison, e.g. "Do X > Do Y")', type: 'text' },
     { key: 'related', label: 'Related principle ids (comma-separated)', type: 'text' },
-    { key: 'cited', label: 'Cited', type: 'text' },
     { key: 'description', label: 'Description', type: 'textarea' },
     { key: 'questions', label: 'Questions to ask yourself (one per line)', type: 'textarea' },
     { key: 'examples', label: 'Examples (one per line, "X > Y" format)', type: 'textarea' },
@@ -57,6 +57,10 @@ function PrincipleEditRow(props) {
                             }
                         </label>
                     ))}
+                    <CitationsEditor
+                        citations={principle.citations}
+                        onChange={(citations) => onChange(principle.id, 'citations', citations)}
+                    />
                     <button type={'button'} className={'admin-delete-btn admin-delete-btn--full'} onClick={() => onDelete(principle.id)}>
                         <i className={'fas fa-trash-alt'}/> Delete this card
                     </button>

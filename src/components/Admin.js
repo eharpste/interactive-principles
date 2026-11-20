@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import { verifyToken, getJsonFile, putJsonFile, CONTENT_BRANCH } from '../utils/github';
 import CategoryEditRow from './admin/CategoryEditRow';
 import PrincipleEditRow from './admin/PrincipleEditRow';
+import { migratePrincipleCitations, normalizeCitations } from '../utils/citations';
+
+// Drops blank citation rows before saving, and omits the field entirely
+// when a card has no citations so the JSON stays tidy.
+function cleanCitationsForSave(principle) {
+    const citations = normalizeCitations(principle);
+    const rest = { ...principle };
+    delete rest.citations;
+    return citations.length ? { ...rest, citations } : rest;
+}
 
 const TOKEN_STORAGE_KEY = 'ip-admin-github-token';
 
@@ -94,7 +104,7 @@ export default class Admin extends Component {
             this.setState({
                 categories: categoriesResult.value,
                 categoriesSha: categoriesResult.sha,
-                principles: principlesResult.value,
+                principles: principlesResult.value.map(migratePrincipleCitations),
                 principlesSha: principlesResult.sha,
                 loading: false
             });
@@ -157,7 +167,7 @@ export default class Admin extends Component {
             exampleGame: '',
             exampleGameUrl: '',
             exampleGameDesc: '',
-            cited: ''
+            citations: []
         };
         this.setState({
             principles: [...this.state.principles, newPrinciple],
@@ -189,6 +199,7 @@ export default class Admin extends Component {
 
     async handleSave() {
         this.setState({ saving: true, saveError: null, saveSuccess: false });
+        const cleanedPrinciples = this.state.principles.map(cleanCitationsForSave);
         try {
             const categoriesResult = await putJsonFile(
                 this.state.token,
@@ -200,7 +211,7 @@ export default class Admin extends Component {
             const principlesResult = await putJsonFile(
                 this.state.token,
                 'src/principles.json',
-                this.state.principles,
+                cleanedPrinciples,
                 this.state.principlesSha,
                 'Update principles via admin page'
             );
@@ -208,7 +219,8 @@ export default class Admin extends Component {
                 saving: false,
                 saveSuccess: true,
                 categoriesSha: categoriesResult.content.sha,
-                principlesSha: principlesResult.content.sha
+                principlesSha: principlesResult.content.sha,
+                principles: cleanedPrinciples.map(migratePrincipleCitations)
             });
         } catch (err) {
             this.setState({ saving: false, saveError: err.message });
@@ -229,7 +241,7 @@ export default class Admin extends Component {
                         </a>
                     </li>
                     <li>Under <strong>Repository access</strong>, choose &quot;Only select repositories&quot; and pick <code>eharpste/interactive-principles</code>.</li>
-                    <li>Click <strong>Repository permissions</strong> to expand it (it's collapsed by default).</li>
+                    <li>Click <strong>Repository permissions</strong> to expand it (it&apos;s collapsed by default).</li>
                     <li>Find <strong>Contents</strong> in the list and change it from &quot;No access&quot; to <strong>&quot;Read and write&quot;</strong>.</li>
                     <li>Scroll down and click <strong>Generate token</strong>, then paste it below.</li>
                 </ol>
