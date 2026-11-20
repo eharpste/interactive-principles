@@ -13,9 +13,29 @@
     "exampleGameDesc": "Duolingo is a mobile app for learning languages. Duolingo encourages users to take a break in between lessons by providing incentives for “streaks” of practicing for multiple days in a row.",
     "citations": [
       {
-        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
+        "label": "Pashler et al. (2007), IES Practice Guide: \"Space learning over time\"",
         "url": "https://doi.org/10.1037/e607972011-001",
         "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #5 Spacing effect, #14 Desirable difficulties",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Cepeda et al. (2006), Distributed Practice in Verbal Recall Tasks: A Review and Quantitative Synthesis",
+        "url": "https://doi.org/10.1037/0033-2909.132.3.354",
+        "kind": "evidence"
+      },
+      {
+        "label": "Settles & Meeder (2016), A Trainable Spaced Repetition Model for Language Learning (Duolingo)",
+        "url": "https://doi.org/10.18653/v1/p16-1174",
+        "kind": "games"
+      },
+      {
+        "label": "Ben-David & Roll (2023), Desirable Difficulties? Spaced and Interleaved Practice in an Educational Game",
+        "url": "https://doi.org/10.1007/978-3-031-36336-8_21",
+        "kind": "games"
       }
     ]
   },
@@ -30,7 +50,34 @@
     "examples": "Learn to draw contours and break objects down into shapes > Draw a human figure in high fidelity\nTeach a player to do a jump in level 1, doublejump in level 2, backflip in level 3, and double-jump backflip in level 4 > Teach double-jump backflip in level 1",
     "exampleGame": "Minecraft",
     "exampleGameUrl": "https://www.minecraft.net/en-us/",
-    "exampleGameDesc": "Minecraft is a popular open-ended game in which players explore the iconic, randomly generated, blocky terrain and break down resource blocks in order to combine them to build new things. Minecraft’s advancements tree is structured in a way that it serves as a walk-through of what to do next. Previous achievements make further achievements possible, often by producing resources needed to build further items."
+    "exampleGameDesc": "Minecraft is a popular open-ended game in which players explore the iconic, randomly generated, blocky terrain and break down resource blocks in order to combine them to build new things. Minecraft’s advancements tree is structured in a way that it serves as a walk-through of what to do next. Previous achievements make further achievements possible, often by producing resources needed to build further items.",
+    "citations": [
+      {
+        "label": "Wood, Bruner & Ross (1976), The Role of Tutoring in Problem Solving",
+        "url": "https://doi.org/10.1111/j.1469-7610.1976.tb00381.x",
+        "kind": "origin"
+      },
+      {
+        "label": "Anderson, Corbett, Koedinger & Pelletier (1995), Cognitive Tutors: Lessons Learned (principle 8: facilitate successive approximations to the target skill)",
+        "url": "https://doi.org/10.1207/s15327809jls0402_2",
+        "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #23 Discovery learning",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Linehan et al. (2014), Learning Curves: Analysing Pace and Challenge in Four Successful Puzzle Games",
+        "url": "https://doi.org/10.1145/2658537.2658695",
+        "kind": "games"
+      },
+      {
+        "label": "Cai et al. (2022), Effects of Scaffolding in Digital Game-Based Learning: A Three-Level Meta-Analysis",
+        "url": "https://doi.org/10.1007/s10648-021-09655-0",
+        "kind": "games"
+      }
+    ]
   },
   {
     "id": 3,
@@ -43,7 +90,19 @@
     "examples": "Tell your 6th grade class that there will be a quiz on this reading > Tell them to do the reading because it will better them as a student\nWhen teaching a player to perform a function, provide some examples of future tasks that this skill is needed to complete (“double jump: used for collecting butterflies”) > Teach the function in a vacuum",
     "exampleGame": "Crazy Plant Shop",
     "exampleGameUrl": "https://www.filamentlearning.com/products/heredity-unit-crazy-plant-shop",
-    "exampleGameDesc": "Crazy Plant Shop is a plant genetics learning game aligned to Common Core and Next Generation Science standards. Players need to fulfill customer orders using the knowledge of trait inheritance and plant genetics. The game tells players they will receive mysterious customers’ orders in the very beginning, so players would learn more engagingly."
+    "exampleGameDesc": "Crazy Plant Shop is a plant genetics learning game aligned to Common Core and Next Generation Science standards. Players need to fulfill customer orders using the knowledge of trait inheritance and plant genetics. The game tells players they will receive mysterious customers’ orders in the very beginning, so players would learn more engagingly.",
+    "citations": [
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #6 Exam expectations",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Szpunar, McDermott & Roediger (2007), Expectation of a Final Cumulative Test Enhances Long-Term Retention",
+        "url": "https://doi.org/10.3758/bf03193473",
+        "kind": "evidence"
+      }
+    ]
   },
   {
     "id": 4,
@@ -59,9 +118,34 @@
     "exampleGameDesc": "Battleship Numberline is one of many K-12 math games that takes an approach of repetitive drilling (or quizzing) to ingrain concepts in the player’s mind. After learning new skills about math, the questions about old skills are still in the quizzes. Time pressure and a display of average accuracy put some heat on the player.",
     "citations": [
       {
-        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
+        "label": "Pashler et al. (2007), IES Practice Guide: \"Use quizzing to promote learning\"",
         "url": "https://doi.org/10.1037/e607972011-001",
         "kind": "origin"
+      },
+      {
+        "label": "Astleitner (2005), Principles of Effective Instruction: Principle 8, Increasing the efficiency of learning",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #4 Testing effect, #14 Desirable difficulties",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Roediger & Butler (2011), The Critical Role of Retrieval Practice in Long-Term Retention",
+        "url": "https://doi.org/10.1016/j.tics.2010.09.003",
+        "kind": "evidence"
+      },
+      {
+        "label": "Yang et al. (2021), Testing (Quizzing) Boosts Classroom Learning: A Systematic and Meta-Analytic Review",
+        "url": "https://doi.org/10.1037/bul0000309",
+        "kind": "evidence"
+      },
+      {
+        "label": "Jain & Yang (2026), Quiz-Based Mechanics for Long-Term Retention in Game-Based Learning",
+        "url": "https://doi.org/10.34190/ecgbl.20.1.5397",
+        "kind": "games"
       }
     ]
   },
@@ -73,7 +157,29 @@
     "related": "1, 2",
     "questions": "How will the game adjust to players with different learning paces? \nWhat is the order of these learning units? Can players control it?\n",
     "description": "Break material down into units in order to allow the player/learner to approach the material at their own pace. \nPlan the order and amount of new information that is to be presented in discrete units so as not to overwhelm new players with too much new information at once. Also, players don’t have to play the entire game to get the benefit.",
-    "examples": "Levels > One very long game\nA series of Portuguese verb lessons on verbs used in different scenarios>a very long, continuous curriculum on all Portuguese verbs"
+    "examples": "Levels > One very long game\nA series of Portuguese verb lessons on verbs used in different scenarios>a very long, continuous curriculum on all Portuguese verbs",
+    "citations": [
+      {
+        "label": "Mayer (2017), Using Multimedia for E-Learning (segmenting principle)",
+        "url": "https://doi.org/10.1111/jcal.12197",
+        "kind": "origin"
+      },
+      {
+        "label": "Anderson, Corbett, Koedinger & Pelletier (1995), Cognitive Tutors: Lessons Learned (principle 2: communicate the goal structure underlying the problem solving)",
+        "url": "https://doi.org/10.1207/s15327809jls0402_2",
+        "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #16 Segmentation principle",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Mayer & Chandler (2001), When Learning Is Just a Click Away",
+        "url": "https://doi.org/10.1037/0022-0663.93.2.390",
+        "kind": "evidence"
+      }
+    ]
   },
   {
     "id": 6,
@@ -89,9 +195,29 @@
     "exampleGameDesc": "JobPro: Get Dressed! Is a mobile game created by Simcoach Games that trains players in how to dress for a job interview. Players choose an outfit based on the role they are interviewing for, the atmosphere of the company, and various other factors. After the player makes their selection they receive detailed feedback about the outfit they chose and its compatibility with the position.",
     "citations": [
       {
-        "label": "Graesser, Halpern & Hakel, 25 Principles to Guide Pedagogy and the Design of Learning Environments (APS/APA)",
+        "label": "Astleitner (2005), Principles of Effective Instruction: Principle 2, Multiple supporting of cognitive, motivational, and emotional characteristics",
         "url": "",
         "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #12 Feedback effects",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Hattie & Timperley (2007), The Power of Feedback",
+        "url": "https://doi.org/10.3102/003465430298487",
+        "kind": "evidence"
+      },
+      {
+        "label": "Kluger & DeNisi (1996), Effects of Feedback Interventions on Performance",
+        "url": "https://doi.org/10.1037/0033-2909.119.2.254",
+        "kind": "evidence"
+      },
+      {
+        "label": "Johnson, Bailey & Van Buskirk (2017), Designing Effective Feedback Messages in Serious Games and Simulations",
+        "url": "https://doi.org/10.1007/978-3-319-39298-1_7",
+        "kind": "games"
       }
     ]
   },
@@ -109,9 +235,19 @@
     "exampleGameDesc": "Coding for Carrots is a drag-and-drop coding game that tells a story of a rabbit searches for carrots by completing the block building activity. There is a trial round before every official game. It offers pretraining of the skills that the game wants to test, and it also helps to set an expectation of the difficulty level for the players.",
     "citations": [
       {
-        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
-        "url": "https://doi.org/10.1037/e607972011-001",
+        "label": "Mayer, Mathias & Wetzell (2002), Fostering Understanding of Multimedia Messages Through Pre-Training",
+        "url": "https://doi.org/10.1037/1076-898x.8.3.147",
         "kind": "origin"
+      },
+      {
+        "label": "Anderson, Corbett, Koedinger & Pelletier (1995), Cognitive Tutors: Lessons Learned (principle 7: adjust the grain size of instruction with learning)",
+        "url": "https://doi.org/10.1207/s15327809jls0402_2",
+        "kind": "origin"
+      },
+      {
+        "label": "Mayer, Mautone & Prothero (2002), Pictorial Aids for Learning by Doing in a Multimedia Geology Simulation Game",
+        "url": "https://doi.org/10.1037/0022-0663.94.1.171",
+        "kind": "games"
       }
     ]
   },
@@ -129,9 +265,39 @@
     "exampleGameDesc": "Anti-Phishing Phil is a game that teaches users how to identify phishing URLs, where to look for cues in web browsers, and how to use search engines to find legitimate sites. Each module of the game begins with a non-interactive tutorial in which the player is presented with several worked examples of the types of problems they will need to solve.\n\nAnti-Phishing Phil was developed by members of the Carnegie Mellon University Usable Privacy and Security Laboratory with funding from the US National Science Foundation (Cyber Trust initiative) and ARO/CyLab.",
     "citations": [
       {
-        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
+        "label": "Pashler et al. (2007), IES Practice Guide: \"Interleave worked example solutions with problem-solving exercises\"",
         "url": "https://doi.org/10.1037/e607972011-001",
         "kind": "origin"
+      },
+      {
+        "label": "Merrill (2002), First Principles of Instruction (demonstration principle)",
+        "url": "https://doi.org/10.1007/bf02505024",
+        "kind": "origin"
+      },
+      {
+        "label": "Anderson, Corbett, Koedinger & Pelletier (1995), Cognitive Tutors: Lessons Learned (principle 3: provide instruction in the problem-solving context)",
+        "url": "https://doi.org/10.1207/s15327809jls0402_2",
+        "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #10 Stories and example cases",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Atkinson, Derry, Renkl & Wortham (2000), Learning from Examples: Instructional Principles from the Worked Examples Research",
+        "url": "https://doi.org/10.3102/00346543070002181",
+        "kind": "evidence"
+      },
+      {
+        "label": "ter Vrugte et al. (2017), Computer Game-Based Mathematics Education: Embedded Faded Worked Examples Facilitate Knowledge Acquisition",
+        "url": "https://doi.org/10.1016/j.learninstruc.2016.11.007",
+        "kind": "games"
+      },
+      {
+        "label": "Toukiloglou & Xinogalos (2022), In-Game Worked Examples Support as an Alternative to Textual Instructions",
+        "url": "https://doi.org/10.1177/07356331211073655",
+        "kind": "games"
       }
     ]
   },
@@ -146,9 +312,34 @@
     "examples": "“Shelly needs 3 dozen eggs. X = the number of eggs she needs.” > “X = 3(12). “\nPlay through the circle of 5ths on piano while following along on the diagram > Review a diagram of the circle of 5ths\nChocolate bar split into 4 equal pieces > ¼ ",
     "citations": [
       {
-        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
+        "label": "Pashler et al. (2007), IES Practice Guide: \"Connect and integrate abstract and concrete representations of concepts\"",
         "url": "https://doi.org/10.1037/e607972011-001",
         "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #2 Perceptual-motor grounding",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "McNeil & Fyfe (2012), \"Concreteness Fading\" Promotes Transfer of Mathematical Knowledge",
+        "url": "https://doi.org/10.1016/j.learninstruc.2012.05.001",
+        "kind": "evidence"
+      },
+      {
+        "label": "Fyfe & Nathan (2019), Making \"Concreteness Fading\" More Concrete as a Theory of Instruction",
+        "url": "https://doi.org/10.1080/00131911.2018.1424116",
+        "kind": "evidence"
+      },
+      {
+        "label": "Kokkonen & Schalk (2021), One Instructional Sequence Fits All? The Applicability of Concreteness Fading",
+        "url": "https://doi.org/10.1007/s10648-020-09581-7",
+        "kind": "evidence"
+      },
+      {
+        "label": "Zeng et al. (2024), The Impact of Embodied Scaffolding Sequences on STEM Conceptual Learning",
+        "url": "https://doi.org/10.1007/s11423-024-10438-x",
+        "kind": "games"
       }
     ]
   },
@@ -163,7 +354,34 @@
     "examples": "A game with a tutorial and instructions > No text\nAn article with an outline and headings > A long article without any outline or headings",
     "exampleGame": "Creature Capture",
     "exampleGameUrl": "http://play.centerforgamescience.org/creaturecapture/",
-    "exampleGameDesc": "Creature Capture is a strategy game published by the University of Washington Center for Game Science. It teaches young children to compare their game fraction values with those of the computer-controlled virals. \nTo win the game, the player needs to pick a number that meets the requirement of the presented game cue. The game's interactive tutorial walks the player through each step of a round."
+    "exampleGameDesc": "Creature Capture is a strategy game published by the University of Washington Center for Game Science. It teaches young children to compare their game fraction values with those of the computer-controlled virals. \nTo win the game, the player needs to pick a number that meets the requirement of the presented game cue. The game's interactive tutorial walks the player through each step of a round.",
+    "citations": [
+      {
+        "label": "Mayer (2017), Using Multimedia for E-Learning (signaling principle)",
+        "url": "https://doi.org/10.1111/jcal.12197",
+        "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #8 Organization effects",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Schneider et al. (2018), A Meta-Analysis of How Signaling Affects Learning with Media",
+        "url": "https://doi.org/10.1016/j.edurev.2017.11.001",
+        "kind": "evidence"
+      },
+      {
+        "label": "Nelson et al. (2014), Visual Signaling in Virtual World-Based Assessments: The SAVE Science Project",
+        "url": "https://doi.org/10.1016/j.ins.2013.09.011",
+        "kind": "games"
+      },
+      {
+        "label": "Andersen et al. (2012), The Impact of Tutorials on Games of Varying Complexity",
+        "url": "https://doi.org/10.1145/2207676.2207687",
+        "kind": "games"
+      }
+    ]
   },
   {
     "id": 11,
@@ -176,7 +394,24 @@
     "examples": "In a philosophy course, make connections between philosophers and how their beliefs about key topics compare and contrast > Give an overview of each major philosopher\nLink the facts 2 + 3 = 5 in math with coordinate axis > teach the fact 2+3=5 and coordinate axis separately",
     "exampleGame": "Human Resource Machine",
     "exampleGameUrl": "https://tomorrowcorporation.com/humanresourcemachine",
-    "exampleGameDesc": "Human Resource Machine is a puzzle game that teaches programming. The player controls tiny office workers with simple programming to perform tasks dictated by a cruel manager. Each level builds upon the one before it and incorporates previously learned commands, explaining how the commands relate to each other and work together.\n"
+    "exampleGameDesc": "Human Resource Machine is a puzzle game that teaches programming. The player controls tiny office workers with simple programming to perform tasks dictated by a cruel manager. Each level builds upon the one before it and incorporates previously learned commands, explaining how the commands relate to each other and work together.\n",
+    "citations": [
+      {
+        "label": "Merrill (2002), First Principles of Instruction (integration principle)",
+        "url": "https://doi.org/10.1007/bf02505024",
+        "kind": "origin"
+      },
+      {
+        "label": "Anderson, Corbett, Koedinger & Pelletier (1995), Cognitive Tutors: Lessons Learned (principle 4: promote an abstract understanding of the problem-solving knowledge)",
+        "url": "https://doi.org/10.1207/s15327809jls0402_2",
+        "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #20 Cognitive flexibility",
+        "url": "",
+        "kind": "origin"
+      }
+    ]
   },
   {
     "id": 12,
@@ -192,9 +427,29 @@
     "exampleGameDesc": "The classic multiplayer Nintendo game Mario Kart uses a unique approach to balancing the different skill levels of players. The game would give more powerful items, which are used to sabotage other players, to players who are performing not so good, to reduce the difficulty.",
     "citations": [
       {
-        "label": "Graesser, Halpern & Hakel, 25 Principles to Guide Pedagogy and the Design of Learning Environments (APS/APA)",
+        "label": "Astleitner (2005), Principles of Effective Instruction: Principle 3, Considering the strengths of students",
         "url": "",
         "kind": "origin"
+      },
+      {
+        "label": "Anderson, Corbett, Koedinger & Pelletier (1995), Cognitive Tutors: Lessons Learned (principle 1: represent student competence as a production set)",
+        "url": "https://doi.org/10.1207/s15327809jls0402_2",
+        "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #21 Goldilocks principle",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Metcalfe & Kornell (2005), A Region of Proximal Learning Model of Study Time Allocation",
+        "url": "https://doi.org/10.1016/j.jml.2004.12.001",
+        "kind": "evidence"
+      },
+      {
+        "label": "Lomas et al. (2013), Optimizing Challenge in an Educational Game Using Large-Scale Design Experiments",
+        "url": "https://doi.org/10.1145/2470654.2470668",
+        "kind": "games"
       }
     ]
   },
@@ -209,7 +464,19 @@
     "examples": "Ask students to think about examples of vaporization in daily life before introducing the theory of vaporization > Introducing the theory of vaporization directly\nWhen explaining photosynthesis to a child, use a metaphor of how a person drinks milk through a straw like how a plant drinks water through its stem > Explain a brand new concept from scratch",
     "exampleGame": "A Slower Speed of Light",
     "exampleGameUrl": "http://gamelab.mit.edu/games/a-slower-speed-of-light/",
-    "exampleGameDesc": "A Slower Speed of Light is a first-person game prototype developed by MIT Game Lab. A Slower Speed of Light is designed to build upon and challenge the average person’s understanding of how light travels. It begins with a very familiar experience: walking through a space at a human-like pace collecting objects. Picking up orbs reduces the speed of light in increments, triggering scientifically accurate visual effects."
+    "exampleGameDesc": "A Slower Speed of Light is a first-person game prototype developed by MIT Game Lab. A Slower Speed of Light is designed to build upon and challenge the average person’s understanding of how light travels. It begins with a very familiar experience: walking through a space at a human-like pace collecting objects. Picking up orbs reduces the speed of light in increments, triggering scientifically accurate visual effects.",
+    "citations": [
+      {
+        "label": "Merrill (2002), First Principles of Instruction (activation principle)",
+        "url": "https://doi.org/10.1007/bf02505024",
+        "kind": "origin"
+      },
+      {
+        "label": "Hattan, Alexander & Lupo (2024), Leveraging What Students Know to Make Sense of Texts: Prior Knowledge Activation",
+        "url": "https://doi.org/10.3102/00346543221148478",
+        "kind": "evidence"
+      }
+    ]
   },
   {
     "id": 14,
@@ -222,7 +489,39 @@
     "examples": "A musician plays a wrong note on guitar and hears the dissonance > A musician makes a mistake writing sheet music and later notices when playing through the line\nA child touches a hot skillet and burns her hand > A child knocks over a vase and is later scolded\nA computer science student makes a mistake and the line turns red as they type > The student presses the “compile” button, and gets an error message",
     "exampleGame": "Operation",
     "exampleGameUrl": "https://shop.hasbro.com/en-us",
-    "exampleGameDesc": "Operation is a classic board game in which players perform “surgery” on a doll-shaped board, carefully extracting plastic objects from the body with a goal of not touching the board. If the player slips up and makes contact with the board a buzzer sounds immediately."
+    "exampleGameDesc": "Operation is a classic board game in which players perform “surgery” on a doll-shaped board, carefully extracting plastic objects from the body with a goal of not touching the board. If the player slips up and makes contact with the board a buzzer sounds immediately.",
+    "citations": [
+      {
+        "label": "Anderson, Corbett, Koedinger & Pelletier (1995), Cognitive Tutors: Lessons Learned (principle 6: provide immediate feedback on errors)",
+        "url": "https://doi.org/10.1207/s15327809jls0402_2",
+        "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #13 Negative suggestion effects",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Kulik & Kulik (1988), Timing of Feedback and Verbal Learning",
+        "url": "https://doi.org/10.3102/00346543058001079",
+        "kind": "evidence"
+      },
+      {
+        "label": "Mathan & Koedinger (2005), Fostering the Intelligent Novice: Learning from Errors with Metacognitive Tutoring",
+        "url": "https://doi.org/10.1207/s15326985ep4004_7",
+        "kind": "evidence"
+      },
+      {
+        "label": "Rahimi et al. (2022), Timing of Learning Supports in Educational Games Can Impact Students' Outcomes",
+        "url": "https://doi.org/10.1016/j.compedu.2022.104600",
+        "kind": "games"
+      },
+      {
+        "label": "Bikas et al. (2024), Low Latency Feedback: Immediate versus Delayed Feedback in Speedrunning Super Mario Bros.",
+        "url": "https://doi.org/10.1145/3677087",
+        "kind": "games"
+      }
+    ]
   },
   {
     "id": 15,
@@ -235,7 +534,24 @@
     "examples": "A dance teacher choreographs a piece combining different techniques that the class has learned this month for them to practice > Additional practice of the same techniques\nA yoga class mixes both yin and yang practices > Long holds only\nPracticing vocabulary based on the forgetting curve theory > Practice today’s new vocabulary only",
     "exampleGame": "Ninja Kitchen",
     "exampleGameUrl": "https://ninjakitchengame.org/",
-    "exampleGameDesc": "Ninja Kitchen is a restaurant serving game focusing on food safety. The player role plays a ninja server, and he/she learns to operate the restaurant through a mixture of smaller games targeting different perspectives, including dish washing, food preparing, serving, etc. The harder the game goes, the busier the restaurant runs. The players will practice all kinds of skills in later levels."
+    "exampleGameDesc": "Ninja Kitchen is a restaurant serving game focusing on food safety. The player role plays a ninja server, and he/she learns to operate the restaurant through a mixture of smaller games targeting different perspectives, including dish washing, food preparing, serving, etc. The harder the game goes, the busier the restaurant runs. The players will practice all kinds of skills in later levels.",
+    "citations": [
+      {
+        "label": "Rohrer & Taylor (2007), The Shuffling of Mathematics Problems Improves Learning",
+        "url": "https://doi.org/10.1007/s11251-007-9015-8",
+        "kind": "origin"
+      },
+      {
+        "label": "Rohrer et al. (2020), A Randomized Controlled Trial of Interleaved Mathematics Practice",
+        "url": "https://doi.org/10.1037/edu0000367",
+        "kind": "evidence"
+      },
+      {
+        "label": "Ben-David & Roll (2023), Desirable Difficulties? Spaced and Interleaved Practice in an Educational Game",
+        "url": "https://doi.org/10.1007/978-3-031-36336-8_21",
+        "kind": "games"
+      }
+    ]
   },
   {
     "id": 16,
@@ -251,9 +567,24 @@
     "exampleGameDesc": "Septris is an educational tool created by Stanford Hospital to train medical and surgical staff to diagnose, classify, and treat sepsis according to best practices. In the game, players need to apply sepsis skills in the case scenarios.",
     "citations": [
       {
-        "label": "Merrill (2002), First Principles of Instruction",
+        "label": "Merrill (2002), First Principles of Instruction (application principle)",
         "url": "https://doi.org/10.1007/bf02505024",
         "kind": "origin"
+      },
+      {
+        "label": "Astleitner (2005), Principles of Effective Instruction: Principle 4, Knowledge acquiring and applying in varying contexts",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Koedinger et al. (2015), Learning Is Not a Spectator Sport: Doing Is Better than Watching for Learning from a MOOC",
+        "url": "https://doi.org/10.1145/2724660.2724681",
+        "kind": "evidence"
+      },
+      {
+        "label": "Evans et al. (2015), Septris: A Novel, Mobile, Online, Simulation Game That Improves Sepsis Recognition and Management",
+        "url": "https://doi.org/10.1097/acm.0000000000000611",
+        "kind": "games"
       }
     ]
   },
@@ -271,8 +602,8 @@
     "exampleGameDesc": "Battleship Numberline is a game that prompts children to practice eyeballing ratios by marking a spot on a numberline. The game has modes for fractions, decimals, percentages, and \"mixed bag,\" prompting the player to apply the same skills to varied problems.",
     "citations": [
       {
-        "label": "Graesser, Halpern & Hakel, 25 Principles to Guide Pedagogy and the Design of Learning Environments (APS/APA)",
-        "url": "",
+        "label": "Paas & van Merriënboer (1994), Variability of Worked Examples and Transfer of Geometrical Problem-Solving Skills",
+        "url": "https://doi.org/10.1037/0022-0663.86.1.122",
         "kind": "origin"
       }
     ]
@@ -288,7 +619,29 @@
     "examples": "Point out the same music theory concept in classical, pop, and jazz music examples, and point out similarities and differences in how it is used > Use only examples of classical music",
     "exampleGame": "Spent",
     "exampleGameUrl": "http://playspent.org/",
-    "exampleGameDesc": "Spent is a game to tell people why people struggling in poverty need external help. Players will occur a series of events to see how hard it is to make a living in poverty. By showing the impact of poverty on education, healthcare, housing, job hunting,etc, the game helps learners understand the importance of financial assistance to poor people."
+    "exampleGameDesc": "Spent is a game to tell people why people struggling in poverty need external help. Players will occur a series of events to see how hard it is to make a living in poverty. By showing the impact of poverty on education, healthcare, housing, job hunting,etc, the game helps learners understand the importance of financial assistance to poor people.",
+    "citations": [
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #11 Multiple examples",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Alfieri, Nokes-Malach & Schunn (2013), Learning Through Case Comparisons: A Meta-Analytic Review",
+        "url": "https://doi.org/10.1080/00461520.2013.775712",
+        "kind": "evidence"
+      },
+      {
+        "label": "Sidney, Hattikudur & Alibali (2015), How Do Contrasting Cases and Self-Explanation Promote Learning?",
+        "url": "https://doi.org/10.1016/j.learninstruc.2015.07.006",
+        "kind": "evidence"
+      },
+      {
+        "label": "Chase, Harpstead & Aleven, Inciting Out-of-Game Transfer: Adapting Contrast-Based Instruction for Educational Games (GLS Proceedings)",
+        "url": "https://playstorypress.org/gameslearningsociety/",
+        "kind": "games"
+      }
+    ]
   },
   {
     "id": 19,
@@ -301,9 +654,34 @@
     "examples": "A visualization of median income by state > A list alone\nA labeled map accompanying a description of Egyptian trade routes > Description alone",
     "citations": [
       {
-        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
+        "label": "Mayer (2017), Using Multimedia for E-Learning (multimedia principle)",
+        "url": "https://doi.org/10.1111/jcal.12197",
+        "kind": "origin"
+      },
+      {
+        "label": "Pashler et al. (2007), IES Practice Guide: \"Combine graphics with verbal description\"",
         "url": "https://doi.org/10.1037/e607972011-001",
         "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #3 Dual code and multimedia effects",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Mayer (2008), Applying the Science of Learning: Evidence-Based Principles for the Design of Multimedia Instruction",
+        "url": "https://doi.org/10.1037/0003-066x.63.8.760",
+        "kind": "evidence"
+      },
+      {
+        "label": "Noetel et al. (2021), Multimedia Design for Learning: An Overview of Reviews With Meta-Meta-Analysis",
+        "url": "https://doi.org/10.3102/00346543211052329",
+        "kind": "evidence"
+      },
+      {
+        "label": "Mayer (2019), Computer Games in Education",
+        "url": "https://doi.org/10.1146/annurev-psych-010418-102744",
+        "kind": "games"
       }
     ]
   },
@@ -321,9 +699,24 @@
     "exampleGameDesc": "A desert system game to build an ecosystem in an Australian desert. Players learn how plants and animals in the ecosystem influence each other through the game. In the game, all the notice and feedback to the ecosystem are given by audio and aligned with the view on the interface.",
     "citations": [
       {
-        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
-        "url": "https://doi.org/10.1037/e607972011-001",
+        "label": "Mayer (2017), Using Multimedia for E-Learning (modality principle)",
+        "url": "https://doi.org/10.1111/jcal.12197",
         "kind": "origin"
+      },
+      {
+        "label": "Ginns (2005), Meta-Analysis of the Modality Effect",
+        "url": "https://doi.org/10.1016/j.learninstruc.2005.07.001",
+        "kind": "evidence"
+      },
+      {
+        "label": "Reinwein (2012), Does the Modality Effect Exist? And If So, Which Modality Effect?",
+        "url": "https://doi.org/10.1007/s10936-011-9180-4",
+        "kind": "evidence"
+      },
+      {
+        "label": "Moreno, Mayer et al. (2001), The Case for Social Agency in Computer-Based Teaching (Design-a-Plant)",
+        "url": "https://doi.org/10.1207/s1532690xci1902_02",
+        "kind": "games"
       }
     ]
   },
@@ -335,7 +728,24 @@
     "related": "19, 20, 22, 23",
     "questions": "What descriptions can or cannot be fully presented in audio?\nShould the verbal descriptions be completely or partially removed?\nIs it easy for all your players to access the information?",
     "description": "If you are able to provide verbal descriptions in audio, refrain from also including those same instructions in written form. People learn better from graphics and narration than from graphics, narration, and printed text.\nBecause (a) the visual channel can become overloaded by having to visually scan between pictures and on-screen text, and (b) because learners expend mental effort in trying to compare the incoming streams of printed and spoken text.\n",
-    "examples": "Watching a documentary with sound > Sound and subtitles\nA presentation that is delivered verbally with accompanying visuals, but no text > Redundant text\nA learner views a narrated animation on lightning formation > a narrated animation along with concurrent onscreen captions that contain the same words as in the narration"
+    "examples": "Watching a documentary with sound > Sound and subtitles\nA presentation that is delivered verbally with accompanying visuals, but no text > Redundant text\nA learner views a narrated animation on lightning formation > a narrated animation along with concurrent onscreen captions that contain the same words as in the narration",
+    "citations": [
+      {
+        "label": "Mayer, Heiser & Lonn (2001), Cognitive Constraints on Multimedia Learning",
+        "url": "https://doi.org/10.1037//0022-0663.93.1.187",
+        "kind": "origin"
+      },
+      {
+        "label": "Adesope & Nesbit (2012), Verbal Redundancy in Multimedia Learning Environments: A Meta-Analysis",
+        "url": "https://doi.org/10.1037/a0026147",
+        "kind": "evidence"
+      },
+      {
+        "label": "Noetel et al. (2021), Multimedia Design for Learning (captions help second-language learners)",
+        "url": "https://doi.org/10.3102/00346543211052329",
+        "kind": "evidence"
+      }
+    ]
   },
   {
     "id": 22,
@@ -348,9 +758,19 @@
     "examples": "A diagram is located inline with the text it supports > Reader has to flip forward several pages to find diagram 1.7\nTooltips are used to provide more information on elements of a data visualization > Visit a \"help\" section for more info\nWhen showing three new concepts that related to each other, shows the description next to the introductive image > Showing the three introductive images first, then give their description together\nTooltips are used to provide more information on elements of a data visualization > not use\n",
     "citations": [
       {
-        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
+        "label": "Mayer (2017), Using Multimedia for E-Learning (spatial contiguity principle)",
+        "url": "https://doi.org/10.1111/jcal.12197",
+        "kind": "origin"
+      },
+      {
+        "label": "Pashler et al. (2007), IES Practice Guide: \"Combine graphics with verbal description\"",
         "url": "https://doi.org/10.1037/e607972011-001",
         "kind": "origin"
+      },
+      {
+        "label": "Ginns (2006), Integrating Information: A Meta-Analysis of the Spatial and Temporal Contiguity Effects",
+        "url": "https://doi.org/10.1016/j.learninstruc.2006.10.001",
+        "kind": "evidence"
       }
     ]
   },
@@ -364,9 +784,19 @@
     "examples": "Show photographs from the great depression while lecturing > Photographs reviewed later",
     "citations": [
       {
-        "label": "Mayer (2017), Using Multimedia for E-Learning",
+        "label": "Mayer (2017), Using Multimedia for E-Learning (temporal contiguity principle)",
         "url": "https://doi.org/10.1111/jcal.12197",
         "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #1 Contiguity effects",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Ginns (2006), Integrating Information: A Meta-Analysis of the Spatial and Temporal Contiguity Effects",
+        "url": "https://doi.org/10.1016/j.learninstruc.2006.10.001",
+        "kind": "evidence"
       }
     ]
   },
@@ -381,7 +811,34 @@
     "examples": "A powerpoint presentation contains purposeful words and images only > Includes lots of decorative illustrations that students pay more attention to than the actual lesson\nA passage about removing ticks from animals features an illustration demonstrating proper tick removal technique > A picture of a cute dog",
     "exampleGame": "Euclidea",
     "exampleGameUrl": "https://www.euclidea.xyz/",
-    "exampleGameDesc": "Euclidea is a geometric construction building game that values simplicity and mathematical beauty. It has 120 tasks, from the very basics to real challenges. It starts with lines, angle bisectors, and perpendiculars, and then go into inner/outer tangents, hexagons, golden section, etc. There is no extraneous information on the interface. There are varied tasks practicing similar topics so that it will make sure players are fully grasped in what they learn. "
+    "exampleGameDesc": "Euclidea is a geometric construction building game that values simplicity and mathematical beauty. It has 120 tasks, from the very basics to real challenges. It starts with lines, angle bisectors, and perpendiculars, and then go into inner/outer tangents, hexagons, golden section, etc. There is no extraneous information on the interface. There are varied tasks practicing similar topics so that it will make sure players are fully grasped in what they learn. ",
+    "citations": [
+      {
+        "label": "Mayer, Heiser & Lonn (2001), Cognitive Constraints on Multimedia Learning",
+        "url": "https://doi.org/10.1037//0022-0663.93.1.187",
+        "kind": "origin"
+      },
+      {
+        "label": "Anderson, Corbett, Koedinger & Pelletier (1995), Cognitive Tutors: Lessons Learned (principle 5: minimize working memory load)",
+        "url": "https://doi.org/10.1207/s15327809jls0402_2",
+        "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #9 Coherence effects",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Moreno & Mayer (2000), A Coherence Effect in Multimedia Learning: Minimizing Irrelevant Sounds",
+        "url": "https://doi.org/10.1037/0022-0663.92.1.117",
+        "kind": "evidence"
+      },
+      {
+        "label": "Sundararajan & Adesope (2020), Keep It Coherent: A Meta-Analysis of the Seductive Details Effect",
+        "url": "https://doi.org/10.1007/s10648-020-09522-4",
+        "kind": "evidence"
+      }
+    ]
   },
   {
     "id": 25,
@@ -397,8 +854,18 @@
     "exampleGameDesc": "Lift Coach is a game that educates people to use safe postures to lift and move objects. Players can correct how on-screen character lifts objects, and the goal is to avoid unsafe actions might lead to injuries. Lifting is such a common daily activity, but not many have paid attention to it. By referring back to real life cases, people will have an easier time to understand the mechanism behind and how to protect themselves in real hard-lifting scenarios.",
     "citations": [
       {
-        "label": "Merrill (2002), First Principles of Instruction",
+        "label": "Cognition and Technology Group at Vanderbilt (1990), Anchored Instruction and Its Relationship to Situated Cognition",
+        "url": "https://doi.org/10.3102/0013189x019006002",
+        "kind": "origin"
+      },
+      {
+        "label": "Merrill (2002), First Principles of Instruction (problem-centered principle)",
         "url": "https://doi.org/10.1007/bf02505024",
+        "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #25 Anchored learning",
+        "url": "",
         "kind": "origin"
       },
       {
@@ -422,6 +889,36 @@
     "exampleGameDesc": "Survival of the Best Fit is a short game designed to teach people to understand algorithmic bias, and prompt them to ask tough questions about their own biases. The game features a series of short segments with periodic breaks to reflect on what just happened and why they made the decisions they made.",
     "citations": [
       {
+        "label": "Pashler et al. (2007), IES Practice Guide: \"Help students allocate study time effectively\"",
+        "url": "https://doi.org/10.1037/e607972011-001",
+        "kind": "origin"
+      },
+      {
+        "label": "Astleitner (2005), Principles of Effective Instruction: Principles 7 and 13, Self-regulated learning and self-instructional materials",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #24 Self-regulated learning, #22 Imperfect metacognition",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Zepeda et al. (2015), Direct Instruction of Metacognition Benefits Adolescent Science Learning, Transfer, and Motivation",
+        "url": "https://doi.org/10.1037/edu0000022",
+        "kind": "evidence"
+      },
+      {
+        "label": "Guo (2022), Using Metacognitive Prompts to Enhance Self-Regulated Learning: A Meta-Analysis",
+        "url": "https://doi.org/10.1111/jcal.12650",
+        "kind": "evidence"
+      },
+      {
+        "label": "Zumbach, Rammerstorfer & Deibl (2020), Cognitive and Metacognitive Support in Learning with a Serious Game",
+        "url": "https://doi.org/10.1016/j.chb.2019.09.026",
+        "kind": "games"
+      },
+      {
         "label": "Culyba (2018), The Transformational Framework",
         "url": "https://www.transformationalframework.com/",
         "kind": "games"
@@ -442,14 +939,34 @@
     "exampleGameDesc": "SET is a cognitive, logical reasoning game. A SET is three cards which share a common feature, such as color or shape. The player who finds the most SETs within the timeframe wins the game. Since every player has his/her own understanding of how to make up the SET, each will prompt to explain their thoughts and definition.",
     "citations": [
       {
-        "label": "Astleitner (2005), Principles of Effective Instruction",
+        "label": "Chi et al. (1994), Eliciting Self-Explanations Improves Understanding",
+        "url": "https://doi.org/10.1207/s15516709cog1803_3",
+        "kind": "origin"
+      },
+      {
+        "label": "Pashler et al. (2007), IES Practice Guide: \"Ask deep explanatory questions\"",
+        "url": "https://doi.org/10.1037/e607972011-001",
+        "kind": "origin"
+      },
+      {
+        "label": "Astleitner (2005), Principles of Effective Instruction: Principle 5, Supporting and evaluating basic knowledge but also higher-order skills",
         "url": "",
         "kind": "origin"
       },
       {
-        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
-        "url": "https://doi.org/10.1037/e607972011-001",
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #17 Explanation effects, #7 Generation effect",
+        "url": "",
         "kind": "origin"
+      },
+      {
+        "label": "Bisra et al. (2018), Inducing Self-Explanation: A Meta-Analysis",
+        "url": "https://doi.org/10.1007/s10648-018-9434-x",
+        "kind": "evidence"
+      },
+      {
+        "label": "Johnson & Mayer (2010), Applying the Self-Explanation Principle in a Computer-Based Game-Like Environment",
+        "url": "https://doi.org/10.1016/j.chb.2010.03.025",
+        "kind": "games"
       }
     ]
   },
@@ -467,14 +984,24 @@
     "exampleGameDesc": "Bury me, my love is a reality-inspired interactive fiction game to help people understand the experience of a Syrian refugee. The players will communicate with the heroine, Nour, and help her on her way to Europe. Players can give advice to Nour and hear from her experience. It is a chance for reflection to see how Nour reacts to the suggestions and what she experienced later.",
     "citations": [
       {
-        "label": "Astleitner (2005), Principles of Effective Instruction",
+        "label": "Graesser & Person (1994), Question Asking During Tutoring",
+        "url": "https://doi.org/10.3102/00028312031001104",
+        "kind": "origin"
+      },
+      {
+        "label": "Astleitner (2005), Principles of Effective Instruction: Principle 1, Instructing based on a design for reflexive learning",
         "url": "",
         "kind": "origin"
       },
       {
-        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
-        "url": "https://doi.org/10.1037/e607972011-001",
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #18 Deep questions",
+        "url": "",
         "kind": "origin"
+      },
+      {
+        "label": "Moreno & Mayer (2005), Role of Guidance, Reflection, and Interactivity in an Agent-Based Multimedia Game",
+        "url": "https://doi.org/10.1037/0022-0663.97.1.117",
+        "kind": "games"
       }
     ]
   },
@@ -489,7 +1016,34 @@
     "examples": "Show an example of a common misconception and explain why it is false > Correct examples only",
     "exampleGame": "Where in the world is Carmen Sandiego?",
     "exampleGameUrl": "https://classicreload.com/where-in-the-world-is-carmen-sandiego.html",
-    "exampleGameDesc": "Where in the world is Carmen Sandiego? is an educational game that tests players’ geography knowledge and the ability to bring piecemeal clues together. The game sets in a criminal chasing scenario, and there are questions in each round helping player to find where the criminals are. Other than the correct detective perspective, the game also lists other leading options which players might choose by mistake to help players think about the differences and similarities between geographic sites. "
+    "exampleGameDesc": "Where in the world is Carmen Sandiego? is an educational game that tests players’ geography knowledge and the ability to bring piecemeal clues together. The game sets in a criminal chasing scenario, and there are questions in each round helping player to find where the criminals are. Other than the correct detective perspective, the game also lists other leading options which players might choose by mistake to help players think about the differences and similarities between geographic sites. ",
+    "citations": [
+      {
+        "label": "Posner, Strike et al. (1982), Accommodation of a Scientific Conception: Toward a Theory of Conceptual Change",
+        "url": "https://doi.org/10.1002/sce.3730660207",
+        "kind": "origin"
+      },
+      {
+        "label": "Astleitner (2005), Principles of Effective Instruction: Principle 6, Stimulating argumentation skills",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Learning Principles (APS/APA): #19 Cognitive disequilibrium",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "McLaren, Adams & Mayer (2015), Delayed Learning Effects with Erroneous Examples",
+        "url": "https://doi.org/10.1007/s40593-015-0064-x",
+        "kind": "evidence"
+      },
+      {
+        "label": "Mogessie et al. (2020), Confrustion and Gaming While Learning with Erroneous Examples in a Decimals Game",
+        "url": "https://doi.org/10.1007/978-3-030-52240-7_38",
+        "kind": "games"
+      }
+    ]
   },
   {
     "id": 30,
@@ -504,6 +1058,26 @@
     "exampleGameUrl": "https://www.richdad.com/promotions/cashflow-classic-evergreen",
     "exampleGameDesc": "Cashflow is an online investigating game. At the beginning of the game, the player will be assigned an identity including job, salary and saving. Then the player will choose a dream as their goal in the game, for example saving the ocean animals, owning a personal jet, etc. The dream selection based on personal interest will motivate players to earn more money this game. In the game, players could practice buying and selling stocks or investing in real estate for capital gains or cash flow.",
     "citations": [
+      {
+        "label": "Hidi & Renninger (2006), The Four-Phase Model of Interest Development",
+        "url": "https://doi.org/10.1207/s15326985ep4102_4",
+        "kind": "origin"
+      },
+      {
+        "label": "Mayer (2017), Using Multimedia for E-Learning (personalization principle)",
+        "url": "https://doi.org/10.1111/jcal.12197",
+        "kind": "origin"
+      },
+      {
+        "label": "Astleitner (2005), Principles of Effective Instruction: Principle 9, Arousing and sustaining interest",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Cordova & Lepper (1996), Intrinsic Motivation and the Process of Learning: Contextualization, Personalization, and Choice",
+        "url": "https://doi.org/10.1037/0022-0663.88.4.715",
+        "kind": "games"
+      },
       {
         "label": "Culyba (2018), The Transformational Framework",
         "url": "https://www.transformationalframework.com/",
