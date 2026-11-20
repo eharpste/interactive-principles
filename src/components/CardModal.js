@@ -6,6 +6,7 @@ import Comparison from './Comparison';
 import MultipleComparisons from './MultipleComparisons';
 import GameExImg from './GameExImage';
 import RelatedLink from './RelatedLink';
+import Citations from './Citations';
 import { getCategoryColors } from '../utils/categoryColors';
 
 class CardModal extends React.Component {
@@ -41,7 +42,7 @@ class CardModal extends React.Component {
                             <GameExImg id={this.props.id} classes={'game-example__image'}/>
                         </div>
                         <div className={'col-xs-12 col-sm-8'}>
-                            <a className={'game-example__title'} href={this.props.exampleGameUrl} target={'_blank'}>
+                            <a className={'game-example__title'} href={this.props.exampleGameUrl} target={'_blank'} rel={'noopener noreferrer'}>
                                 {this.props.exampleGame}
                                 <i className={'fas fa-external-link-square-alt'}/>
                             </a>
@@ -77,21 +78,6 @@ class CardModal extends React.Component {
         }
     }
 
-    renderCitation() {
-        if (this.props.cited) {
-            return(
-                <div>
-                    <div className={'card-modal__body__side-panel__title'}>
-                        <h3>Cited</h3>
-                    </div>
-                    <div className={'card-modal__body__side-panel__related'}>
-                        <p>{this.props.cited}</p>
-                    </div>
-                </div>
-            );
-        }
-    }
-
     renderRelated() {
         if (this.props.related) {
             let related = [];
@@ -110,7 +96,7 @@ class CardModal extends React.Component {
                         <h3>Related Principles</h3>
                         {related.map((item, index) => (
                             ((index + 1) < related.length) ?
-                                <span><RelatedLink key={item} id={item} onOpen={() => this.props.onOpenRelated(item)}></RelatedLink>, </span>
+                                <span key={item}><RelatedLink id={item} onOpen={() => this.props.onOpenRelated(item)}></RelatedLink>, </span>
                                 :
                                 <RelatedLink key={item} id={item} onOpen={() => this.props.onOpenRelated(item)}></RelatedLink>
                         ))}
@@ -154,6 +140,9 @@ class CardModal extends React.Component {
                             <Comparison comparison={this.props.subtitle}/>
                         </div>
                         {this.renderRelated()}
+                        <div className={'card-modal__body__side-panel__citations'}>
+                            <Citations citations={this.props.citations}/>
+                        </div>
                     </div>
                     <div className={'card-modal__body__details col-xs-12 col-sm-8 col-md-8'}>
                         {this.renderQuestions()}
@@ -189,7 +178,7 @@ CardModal.propTypes = {
     exampleGameUrl: PropTypes.any,
     exampleGameDesc: PropTypes.any,
     related: PropTypes.any,
-    cited: PropTypes.any
+    citations: PropTypes.array
 };
 
 export default CardModal;

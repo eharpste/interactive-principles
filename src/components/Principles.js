@@ -5,6 +5,7 @@ import categories from '../categories.json';
 import Button from './Button.js';
 import CardModal from './CardModal';
 import CategoryFilterButton from './CategoryFilterButton';
+import { normalizeCitations } from '../utils/citations';
 
 function compareStrings(a, b) {
     return (a < b) ? -1 : (a > b) ? 1 : 0;
@@ -290,7 +291,7 @@ export default class Principles extends Component {
                     exampleGameUrl={this.state.cardInModal.exampleGameUrl}
                     exampleGameDesc={this.state.cardInModal.exampleGameDesc}
                     related={this.state.cardInModal.related}
-                    cited={this.state.cardInModal.cited}
+                    citations={normalizeCitations(this.state.cardInModal)}
 
                 />
 

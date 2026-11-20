@@ -11,7 +11,13 @@
     "exampleGame": "Duolingo",
     "exampleGameUrl": "https://www.duolingo.com/",
     "exampleGameDesc": "Duolingo is a mobile app for learning languages. Duolingo encourages users to take a break in between lessons by providing incentives for “streaks” of practicing for multiple days in a row.",
-    "cited": "Pashler"
+    "citations": [
+      {
+        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
+        "url": "https://doi.org/10.1037/e607972011-001",
+        "kind": "origin"
+      }
+    ]
   },
   {
     "id": 2,
@@ -51,7 +57,13 @@
     "exampleGame": "Battleship Numberline",
     "exampleGameUrl": "https://www.brainpop.com/games/battleshipnumberline/",
     "exampleGameDesc": "Battleship Numberline is one of many K-12 math games that takes an approach of repetitive drilling (or quizzing) to ingrain concepts in the player’s mind. After learning new skills about math, the questions about old skills are still in the quizzes. Time pressure and a display of average accuracy put some heat on the player.",
-    "cited": "Pashler"
+    "citations": [
+      {
+        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
+        "url": "https://doi.org/10.1037/e607972011-001",
+        "kind": "origin"
+      }
+    ]
   },
   {
     "id": 5,
@@ -75,7 +87,13 @@
     "exampleGame": "JobPro: Get Dressed!",
     "exampleGameUrl": "https://www.simcoachgames.com/jobpro/",
     "exampleGameDesc": "JobPro: Get Dressed! Is a mobile game created by Simcoach Games that trains players in how to dress for a job interview. Players choose an outfit based on the role they are interviewing for, the atmosphere of the company, and various other factors. After the player makes their selection they receive detailed feedback about the outfit they chose and its compatibility with the position.",
-    "cited": "Graesser"
+    "citations": [
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Principles to Guide Pedagogy and the Design of Learning Environments (APS/APA)",
+        "url": "",
+        "kind": "origin"
+      }
+    ]
   },
   {
     "id": 7,
@@ -89,7 +107,13 @@
     "exampleGame": "Coding for Carrots",
     "exampleGameUrl": "https://www.google.com/doodles/celebrating-50-years-of-kids-coding",
     "exampleGameDesc": "Coding for Carrots is a drag-and-drop coding game that tells a story of a rabbit searches for carrots by completing the block building activity. There is a trial round before every official game. It offers pretraining of the skills that the game wants to test, and it also helps to set an expectation of the difficulty level for the players.",
-    "cited": "Pashler"
+    "citations": [
+      {
+        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
+        "url": "https://doi.org/10.1037/e607972011-001",
+        "kind": "origin"
+      }
+    ]
   },
   {
     "id": 8,
@@ -103,7 +127,13 @@
     "exampleGame": "Anti-Phishing Phil",
     "exampleGameUrl": "https://www.wombatsecurity.com/anti-phishing-training-suite",
     "exampleGameDesc": "Anti-Phishing Phil is a game that teaches users how to identify phishing URLs, where to look for cues in web browsers, and how to use search engines to find legitimate sites. Each module of the game begins with a non-interactive tutorial in which the player is presented with several worked examples of the types of problems they will need to solve.\n\nAnti-Phishing Phil was developed by members of the Carnegie Mellon University Usable Privacy and Security Laboratory with funding from the US National Science Foundation (Cyber Trust initiative) and ARO/CyLab.",
-    "cited": "Pashler"
+    "citations": [
+      {
+        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
+        "url": "https://doi.org/10.1037/e607972011-001",
+        "kind": "origin"
+      }
+    ]
   },
   {
     "id": 9,
@@ -114,7 +144,13 @@
     "questions": "What are some concrete/abstract representations of your target concepts?\nWhat are some ways of bridging the concrete and abstract representations?\nHow can you show the players this bridging? By visual instruction, text feedback or other ways?",
     "description": "Introduce a concept with concrete examples, and over time replace key components of that example with more abstract representations.\nWhen explaining key concepts, use both abstract and concrete representations. Let players draw abstract connections between concrete examples, and highlight how they represent the same critical takeaways.\n",
     "examples": "“Shelly needs 3 dozen eggs. X = the number of eggs she needs.” > “X = 3(12). “\nPlay through the circle of 5ths on piano while following along on the diagram > Review a diagram of the circle of 5ths\nChocolate bar split into 4 equal pieces > ¼ ",
-    "cited": "Pashler"
+    "citations": [
+      {
+        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
+        "url": "https://doi.org/10.1037/e607972011-001",
+        "kind": "origin"
+      }
+    ]
   },
   {
     "id": 10,
@@ -154,7 +190,13 @@
     "exampleGame": "Mario Kart",
     "exampleGameUrl": "https://www.nintendo.com/",
     "exampleGameDesc": "The classic multiplayer Nintendo game Mario Kart uses a unique approach to balancing the different skill levels of players. The game would give more powerful items, which are used to sabotage other players, to players who are performing not so good, to reduce the difficulty.",
-    "cited": "Graesser"
+    "citations": [
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Principles to Guide Pedagogy and the Design of Learning Environments (APS/APA)",
+        "url": "",
+        "kind": "origin"
+      }
+    ]
   },
   {
     "id": 13,
@@ -207,7 +249,13 @@
     "exampleGame": "Septris",
     "exampleGameUrl": "http://med.stanford.edu/septris/",
     "exampleGameDesc": "Septris is an educational tool created by Stanford Hospital to train medical and surgical staff to diagnose, classify, and treat sepsis according to best practices. In the game, players need to apply sepsis skills in the case scenarios.",
-    "cited": "Merrill"
+    "citations": [
+      {
+        "label": "Merrill (2002), First Principles of Instruction",
+        "url": "https://doi.org/10.1007/bf02505024",
+        "kind": "origin"
+      }
+    ]
   },
   {
     "id": 17,
@@ -221,7 +269,13 @@
     "exampleGame": "Battleship Numberline",
     "exampleGameUrl": "https://www.brainpop.com/games/battleshipnumberline/",
     "exampleGameDesc": "Battleship Numberline is a game that prompts children to practice eyeballing ratios by marking a spot on a numberline. The game has modes for fractions, decimals, percentages, and \"mixed bag,\" prompting the player to apply the same skills to varied problems.",
-    "cited": "Graesser"
+    "citations": [
+      {
+        "label": "Graesser, Halpern & Hakel, 25 Principles to Guide Pedagogy and the Design of Learning Environments (APS/APA)",
+        "url": "",
+        "kind": "origin"
+      }
+    ]
   },
   {
     "id": 18,
@@ -245,7 +299,13 @@
     "questions": "Is there any scene in your game that is too wordy?\nCould you make your game more visual?\nHow can you visually represent the concept of your game better?",
     "description": "Use visual aids to enhance verbal descriptions. \nWhen words and pictures are both presented, learners have an opportunity to construct verbal and visual mental models and to build connections between them.",
     "examples": "A visualization of median income by state > A list alone\nA labeled map accompanying a description of Egyptian trade routes > Description alone",
-    "cited": "Pashler"
+    "citations": [
+      {
+        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
+        "url": "https://doi.org/10.1037/e607972011-001",
+        "kind": "origin"
+      }
+    ]
   },
   {
     "id": 20,
@@ -259,7 +319,13 @@
     "exampleGame": "Feed the Dingo",
     "exampleGameUrl": "https://pbskids.org/plumlanding/games/ecosystem/feed_the_dingo.html",
     "exampleGameDesc": "A desert system game to build an ecosystem in an Australian desert. Players learn how plants and animals in the ecosystem influence each other through the game. In the game, all the notice and feedback to the ecosystem are given by audio and aligned with the view on the interface.",
-    "cited": "Pashler"
+    "citations": [
+      {
+        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
+        "url": "https://doi.org/10.1037/e607972011-001",
+        "kind": "origin"
+      }
+    ]
   },
   {
     "id": 21,
@@ -280,7 +346,13 @@
     "questions": "What are some presented images that require verbal descriptions?\nWhat are the images that learners are not familiar with?\nAre there any informative visual components that cannot be understood without text?\nHow could you format/place the description relative to the image?\nWhat is the purpose of the description for the image? ",
     "description": "Position descriptive text as closely as possible to the part of the visualization it describes.\nWhen corresponding words and pictures are near each other on the page or screen, learners do not have to use cognitive resources to visually search the page or screen, and learners are more likely to be able to hold them both in working memory at the same time.",
     "examples": "A diagram is located inline with the text it supports > Reader has to flip forward several pages to find diagram 1.7\nTooltips are used to provide more information on elements of a data visualization > Visit a \"help\" section for more info\nWhen showing three new concepts that related to each other, shows the description next to the introductive image > Showing the three introductive images first, then give their description together\nTooltips are used to provide more information on elements of a data visualization > not use\n",
-    "cited": "Pashler"
+    "citations": [
+      {
+        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
+        "url": "https://doi.org/10.1037/e607972011-001",
+        "kind": "origin"
+      }
+    ]
   },
   {
     "id": 23,
@@ -290,7 +362,13 @@
     "questions": "What are the audio & image elements required for this practice?\nWhich audio elements are related to which image elements?\nAre they clearly presented together?",
     "description": "Present complementary audio and visual elements at the same time to encourage the player to form a connection between the two stimuli.\nThe learner is more likely to be able to build mental connections between verbal and visual representations when applying this principle.",
     "examples": "Show photographs from the great depression while lecturing > Photographs reviewed later",
-    "cited": "Mayer"
+    "citations": [
+      {
+        "label": "Mayer (2017), Using Multimedia for E-Learning",
+        "url": "https://doi.org/10.1111/jcal.12197",
+        "kind": "origin"
+      }
+    ]
   },
   {
     "id": 24,
@@ -317,7 +395,18 @@
     "exampleGame": "Lift Coach: Plan Your Lift",
     "exampleGameUrl": "https://www.amazon.com/Lift-Coach-Plan-Your/dp/B076FFL8CJ",
     "exampleGameDesc": "Lift Coach is a game that educates people to use safe postures to lift and move objects. Players can correct how on-screen character lifts objects, and the goal is to avoid unsafe actions might lead to injuries. Lifting is such a common daily activity, but not many have paid attention to it. By referring back to real life cases, people will have an easier time to understand the mechanism behind and how to protect themselves in real hard-lifting scenarios.",
-    "cited": "Merrill, Culyba"
+    "citations": [
+      {
+        "label": "Merrill (2002), First Principles of Instruction",
+        "url": "https://doi.org/10.1007/bf02505024",
+        "kind": "origin"
+      },
+      {
+        "label": "Culyba (2018), The Transformational Framework",
+        "url": "https://www.transformationalframework.com/",
+        "kind": "games"
+      }
+    ]
   },
   {
     "id": 26,
@@ -331,7 +420,13 @@
     "exampleGame": "Survival of the Best Fit",
     "exampleGameUrl": "https://www.survivalofthebestfit.com/game/",
     "exampleGameDesc": "Survival of the Best Fit is a short game designed to teach people to understand algorithmic bias, and prompt them to ask tough questions about their own biases. The game features a series of short segments with periodic breaks to reflect on what just happened and why they made the decisions they made.",
-    "cited": "Culyba"
+    "citations": [
+      {
+        "label": "Culyba (2018), The Transformational Framework",
+        "url": "https://www.transformationalframework.com/",
+        "kind": "games"
+      }
+    ]
   },
   {
     "id": 27,
@@ -345,7 +440,18 @@
     "exampleGame": "SET",
     "exampleGameUrl": "https://www.setgame.com/set",
     "exampleGameDesc": "SET is a cognitive, logical reasoning game. A SET is three cards which share a common feature, such as color or shape. The player who finds the most SETs within the timeframe wins the game. Since every player has his/her own understanding of how to make up the SET, each will prompt to explain their thoughts and definition.",
-    "cited": "Astleitner, Pashler"
+    "citations": [
+      {
+        "label": "Astleitner (2005), Principles of Effective Instruction",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
+        "url": "https://doi.org/10.1037/e607972011-001",
+        "kind": "origin"
+      }
+    ]
   },
   {
     "id": 28,
@@ -359,7 +465,18 @@
     "exampleGame": "Bury me, my love",
     "exampleGameUrl": "http://burymemylove.arte.tv/",
     "exampleGameDesc": "Bury me, my love is a reality-inspired interactive fiction game to help people understand the experience of a Syrian refugee. The players will communicate with the heroine, Nour, and help her on her way to Europe. Players can give advice to Nour and hear from her experience. It is a chance for reflection to see how Nour reacts to the suggestions and what she experienced later.",
-    "cited": "Astleitner, Pashler"
+    "citations": [
+      {
+        "label": "Astleitner (2005), Principles of Effective Instruction",
+        "url": "",
+        "kind": "origin"
+      },
+      {
+        "label": "Pashler et al. (2007), Organizing Instruction and Study to Improve Student Learning (IES Practice Guide)",
+        "url": "https://doi.org/10.1037/e607972011-001",
+        "kind": "origin"
+      }
+    ]
   },
   {
     "id": 29,
@@ -386,6 +503,12 @@
     "exampleGame": "Cashflow",
     "exampleGameUrl": "https://www.richdad.com/promotions/cashflow-classic-evergreen",
     "exampleGameDesc": "Cashflow is an online investigating game. At the beginning of the game, the player will be assigned an identity including job, salary and saving. Then the player will choose a dream as their goal in the game, for example saving the ocean animals, owning a personal jet, etc. The dream selection based on personal interest will motivate players to earn more money this game. In the game, players could practice buying and selling stocks or investing in real estate for capital gains or cash flow.",
-    "cited": "Culyba"
+    "citations": [
+      {
+        "label": "Culyba (2018), The Transformational Framework",
+        "url": "https://www.transformationalframework.com/",
+        "kind": "games"
+      }
+    ]
   }
 ]
