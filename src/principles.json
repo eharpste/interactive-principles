@@ -41,7 +41,7 @@
   },
   {
     "id": 2,
-    "principle": "Scaffolding",
+    "principle": "Sequence Scaffolding",
     "subtitle": "Sequence instruction toward higher goals > No sequencing",
     "categoryId": 1,
     "related": "5",
@@ -81,7 +81,7 @@
   },
   {
     "id": 3,
-    "principle": "Exam expectations",
+    "principle": "Needs expectations",
     "subtitle": "Students expect to be tested > No testing expected",
     "categoryId": 1,
     "related": "4, 7",
@@ -106,7 +106,7 @@
   },
   {
     "id": 4,
-    "principle": "Quizzing",
+    "principle": "Recall Practice",
     "subtitle": "Quiz for retrieval practice > Study same material",
     "categoryId": 1,
     "related": "3, 7",
@@ -303,7 +303,7 @@
   },
   {
     "id": 9,
-    "principle": "Concreteness fading",
+    "principle": "Concrete Grounding",
     "subtitle": "Concrete to abstract representations > Starting with abstract",
     "categoryId": 2,
     "related": "8, 25",
@@ -687,7 +687,7 @@
   },
   {
     "id": 20,
-    "principle": "Modality principle",
+    "principle": "Narration",
     "subtitle": "Verbal descriptions presented in audio > In written form",
     "categoryId": 3,
     "related": "19, 21, 22, 23",
@@ -843,7 +843,7 @@
   },
   {
     "id": 25,
-    "principle": "Anchored learning",
+    "principle": "Realistic Challenge",
     "subtitle": "Real-world problems > Abstract problems",
     "categoryId": 3,
     "related": "9, 8",
