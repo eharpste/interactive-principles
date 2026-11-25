@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Card from './Card.js';
 import principles from '../principles.json';
 import categories from '../categories.json';
@@ -6,6 +7,7 @@ import Button from './Button.js';
 import CardModal from './CardModal';
 import CategoryFilterButton from './CategoryFilterButton';
 import { normalizeCitations } from '../utils/citations';
+import { trackEvent, cardLabel, slug } from '../utils/analytics';
 
 function compareStrings(a, b) {
     return (a < b) ? -1 : (a > b) ? 1 : 0;
@@ -41,10 +43,18 @@ export default class Principles extends Component {
         this.modalNavToPrev = this.modalNavToPrev.bind(this);
         this.modalOpenRelated = this.modalOpenRelated.bind(this);
         this.openRandomCard = this.openRandomCard.bind(this);
+
+        // True when the open card was pushed onto history from within the app,
+        // so closing can step back instead of adding another history entry.
+        this.openedInApp = false;
     }
 
     handleClose() {
-        this.setState({ showModal: false });
+        if (this.openedInApp) {
+            this.props.history.goBack();
+        } else {
+            this.props.history.replace('/');
+        }
     }
 
     handleShow() {
@@ -53,6 +63,48 @@ export default class Principles extends Component {
 
     componentDidMount() {
         this.setState({cards: principles});
+        this.syncModalWithRoute();
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.routeCardId(prevProps) !== this.routeCardId(this.props)) {
+            this.syncModalWithRoute();
+        }
+    }
+
+    routeCardId(props) {
+        return props.match && props.match.params ? props.match.params.id : undefined;
+    }
+
+    // The URL (#/card/:id) is the source of truth for which card is open.
+    syncModalWithRoute() {
+        const id = this.routeCardId(this.props);
+        if (id === undefined) {
+            this.openedInApp = false;
+            this.setState({ showModal: false });
+            return;
+        }
+        const card = principles.find(p => String(p.id) === String(id).trim());
+        if (card) {
+            this.setState({ cardInModal: card, showModal: true });
+        } else {
+            this.props.history.replace('/');
+        }
+    }
+
+    // source: how the card was reached (grid, random, related, next, prev).
+    openCard(card, source) {
+        if (!card) {
+            return;
+        }
+        trackEvent('open-card/' + source, cardLabel(card));
+        const path = '/card/' + card.id;
+        if (this.state.showModal) {
+            this.props.history.replace(path);
+        } else {
+            this.openedInApp = true;
+            this.props.history.push(path);
+        }
     }
 
     //utility
@@ -83,6 +135,7 @@ export default class Principles extends Component {
         } else {
             hidden = [...hidden, catId];
         }
+        trackEvent('filter/' + slug(findCategory(catId).name || catId), hidden.includes(catId) ? 'hide' : 'show');
         this.setState({hiddenCategoryIds: hidden});
     }
 
@@ -104,17 +157,18 @@ export default class Principles extends Component {
         }
         this.setState({cards: items});
         this.setState({allFlipped: !this.state.allFlipped});
-
-        console.log(this.state);
+        trackEvent('toolbar/flip-all');
     }
 
     sortNumerical() {
+        trackEvent('toolbar/sort-numeric');
         let items = this.state.cards;
         items.sort(function(a, b){return (a.id - b.id);});
         this.setState({cards: items});
     }
 
     sortAZ() {
+        trackEvent('toolbar/sort-az');
         let items = this.state.cards;
         items.sort(function(a, b) {
             return compareStrings(a.principle, b.principle);
@@ -124,6 +178,7 @@ export default class Principles extends Component {
 
     //card flip actions, etc
     resetCards() {
+        trackEvent('toolbar/reset');
         let items = principles;
         items.sort(function(a, b){return (a.id - b.id);});
         for (let card of items) {
@@ -150,6 +205,7 @@ export default class Principles extends Component {
         if(!flipcard.id) {
             flipcard = this.state.cardInModal;
         }
+        trackEvent('flip-card', cardLabel(flipcard));
         let items = this.state.cards;
         for (let card of items) {
             if (card.id === flipcard.id) {
@@ -160,6 +216,7 @@ export default class Principles extends Component {
     }
 
     shuffleCards() {
+        trackEvent('toolbar/shuffle');
         let shuffled = this.shuffle(this.state.cards);
         this.setState({cards: shuffled});
     }
@@ -169,13 +226,13 @@ export default class Principles extends Component {
 
         let cards = this.shuffle(principles);
         let hand = cards.slice(0, 5);
+        trackEvent('toolbar/draw-5', 'Drew ' + hand.map(card => card.id).join(', '));
         this.setState({cards: hand});
     }
 
     //modal actions
     renderModal(card) {
-        this.setState({cardInModal: card});
-        this.setState({showModal: true});
+        this.openCard(card, 'grid');
     }
 
     modalNavToNext() {
@@ -184,29 +241,28 @@ export default class Principles extends Component {
         let nextCardIndex = ((currentCardIndex + 1) < this.state.cards.length) ? (currentCardIndex + 1) : 0;
         let nextCard = this.state.cards[nextCardIndex];
 
-        this.setState({cardInModal: (nextCard)});
+        this.openCard(nextCard, 'next');
     }
 
     modalNavToPrev() {
         let currentCardIndex = this.state.cards.indexOf(this.state.cards.find(card => card.id === (this.state.cardInModal.id)));
         //If you are already on the first card, do nothing
-        let prevCardIndex = (currentCardIndex == 0) ? currentCardIndex : (currentCardIndex - 1);
-        let prevCard = this.state.cards[prevCardIndex];
+        if (currentCardIndex <= 0) {
+            return;
+        }
+        let prevCard = this.state.cards[currentCardIndex - 1];
 
-        this.setState({cardInModal: (prevCard)});
+        this.openCard(prevCard, 'prev');
     }
 
     modalOpenRelated(id) {
         let card = principles.filter(function(item) { return item.id == id; })[0];
-        this.setState({cardInModal: card});
+        this.openCard(card, 'related');
     }
 
     openRandomCard() {
-        let min =1;
-        let max = principles.length;
-        let random = Math.floor(Math.random() * (+max - +min)) + +min;
-        let card = principles[random];
-        this.renderModal(card);
+        let card = principles[Math.floor(Math.random() * principles.length)];
+        this.openCard(card, 'random');
     }
 
     render() {
@@ -292,10 +348,21 @@ export default class Principles extends Component {
                     exampleGameDesc={this.state.cardInModal.exampleGameDesc}
                     related={this.state.cardInModal.related}
                     citations={normalizeCitations(this.state.cardInModal)}
-
+                    onOutbound={(kind, detail) => trackEvent('outbound/' + kind, detail || cardLabel(this.state.cardInModal))}
                 />
 
             </div>
         );
     }
 }
+
+Principles.propTypes = {
+    history: PropTypes.shape({
+        push: PropTypes.func,
+        replace: PropTypes.func,
+        goBack: PropTypes.func
+    }),
+    match: PropTypes.shape({
+        params: PropTypes.object
+    })
+};

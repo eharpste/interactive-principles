@@ -19,7 +19,8 @@ function Citations(props) {
                         {group.items.map((citation, index) => (
                             <li key={index} className={'citations__item'}>
                                 {citation.url ?
-                                    <a href={citation.url} target={'_blank'} rel={'noopener noreferrer'}>
+                                    <a href={citation.url} target={'_blank'} rel={'noopener noreferrer'}
+                                        onClick={() => props.onOpen && props.onOpen(citation)}>
                                         {citation.label}
                                         <i className={'fas fa-external-link-alt citations__link-icon'}/>
                                     </a>
@@ -40,7 +41,8 @@ Citations.propTypes = {
         label: PropTypes.string,
         url: PropTypes.string,
         kind: PropTypes.string
-    }))
+    })),
+    onOpen: PropTypes.func
 };
 
 export default Citations;
