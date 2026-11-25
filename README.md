@@ -59,6 +59,30 @@ Output goes to `public/`.
 
 Deployment is fully automatic: any push to `master` (including a save from the admin page) triggers `.github/workflows/deploy.yml`, which builds the site and publishes `public/` to the `gh-pages` branch — the branch GitHub Pages actually serves. There's normally no need to run `npm run deploy` locally anymore.
 
+## Analytics
+
+Usage is counted with [GoatCounter](https://www.goatcounter.com) (cookie-free, no personal data). The code is in `src/utils/analytics.js`.
+
+**Setup:** create a site at goatcounter.com and put its code (the `xyz` in `xyz.goatcounter.com`) in `GOATCOUNTER_CODE` at the top of `src/utils/analytics.js`. While that's empty, nothing is sent. Analytics only runs in the production build; in `npm start` the events are logged to the browser console instead (`[analytics] ...`), and GoatCounter itself ignores `localhost`.
+
+**What's recorded:**
+
+| GoatCounter path | Kind | Title | Meaning |
+|---|---|---|---|
+| `/`, `/about` | pageview | page name | Page visits |
+| `/card/<id>` | pageview | `<id>: <principle>` | A card was opened (every card now has a shareable link, e.g. `#/card/12`) |
+| `open-card/<source>` | event | `<id>: <principle>` | How a card was opened: `grid`, `random`, `related`, `next`, `prev` |
+| `flip-card` | event | `<id>: <principle>` | A card in the grid was flipped to its detail side |
+| `toolbar/<action>` | event | (`draw-5`: the ids drawn) | `reset`, `flip-all`, `sort-az`, `sort-numeric`, `shuffle`, `draw-5` |
+| `filter/<category>` | event | `hide` / `show` | A category filter was toggled |
+| `outbound/<target>` | event | card, or `card <id>: <url>` for citations | Clicks on `example-game`, `citation`, `ohlab`, `learnlab` |
+
+Only the first pageview of a visit records the external referrer (e.g. a course site), so referrer counts are per visit. The `/admin` page isn't counted.
+
+**Excluding your own visits:** open the live site with `#toggle-goatcounter` at the end of the URL (or run `localStorage.setItem('skipgc', 't')` in the browser console). This is per browser.
+
+**Exporting data:** in GoatCounter's site settings, enable **Individual pageviews**; then use Settings → Export for a CSV (one row per pageview/event with path, title, event flag, browser, OS, session, referrer, screen size, region and timestamp), or the API (`/api/v0/export`, which supports incremental exports from the last row ID). Keep raw exports out of this public repo.
+
 ---
 
 ## Developed With

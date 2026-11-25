@@ -57,6 +57,16 @@ function About() {
                 </div>
             </div>
 
+            <h2 className={'about__subtitle'}>Privacy</h2>
+            <div className={'about__section'}>
+                <p className={'about__section__paragraph'}>
+                    To understand how the deck is used, this site counts page and card views
+                    with <a className={'link'} href={'https://www.goatcounter.com'} target={'_blank'} rel={'noopener noreferrer'}>GoatCounter</a>,
+                    a privacy-friendly analytics service. It does not use cookies and does not
+                    collect personal information.
+                </p>
+            </div>
+
             <h2 className={'about__subtitle'}>Team</h2>
             <div className={'about__section'}>
                 <div className={'about__section__paragraph about__section__paragraph--list'}>

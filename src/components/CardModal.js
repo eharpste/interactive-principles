@@ -17,6 +17,10 @@ class CardModal extends React.Component {
     }
 
     handleKeyPress(event) {
+        // This listener is always attached; only navigate while a card is open.
+        if (!this.props.show) {
+            return;
+        }
         if(event.key === 'ArrowLeft'){
             this.props.onPrev();
         }
@@ -42,7 +46,8 @@ class CardModal extends React.Component {
                             <GameExImg id={this.props.id} classes={'game-example__image'}/>
                         </div>
                         <div className={'col-xs-12 col-sm-8'}>
-                            <a className={'game-example__title'} href={this.props.exampleGameUrl} target={'_blank'} rel={'noopener noreferrer'}>
+                            <a className={'game-example__title'} href={this.props.exampleGameUrl} target={'_blank'} rel={'noopener noreferrer'}
+                                onClick={() => this.props.onOutbound && this.props.onOutbound('example-game')}>
                                 {this.props.exampleGame}
                                 <i className={'fas fa-external-link-square-alt'}/>
                             </a>
@@ -141,7 +146,10 @@ class CardModal extends React.Component {
                         </div>
                         {this.renderRelated()}
                         <div className={'card-modal__body__side-panel__citations'}>
-                            <Citations citations={this.props.citations}/>
+                            <Citations
+                                citations={this.props.citations}
+                                onOpen={citation => this.props.onOutbound && this.props.onOutbound('citation', `card ${this.props.id}: ${citation.url}`)}
+                            />
                         </div>
                     </div>
                     <div className={'card-modal__body__details col-xs-12 col-sm-8 col-md-8'}>
@@ -178,7 +186,8 @@ CardModal.propTypes = {
     exampleGameUrl: PropTypes.any,
     exampleGameDesc: PropTypes.any,
     related: PropTypes.any,
-    citations: PropTypes.array
+    citations: PropTypes.array,
+    onOutbound: PropTypes.func
 };
 
 export default CardModal;
